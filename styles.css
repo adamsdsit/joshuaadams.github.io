@@ -1,0 +1,18 @@
+body {
+  font-family: 'Arial', sans-serif;
+  padding-top: 56px;
+}
+
+h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.timeline {
+  border-left: 3px solid #ccc;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+}
