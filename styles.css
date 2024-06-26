@@ -1,6 +1,15 @@
 body {
   font-family: 'Arial', sans-serif;
-  padding-top: 56px;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.navbar-brand, .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28%255, %255, %255, 1%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 h2 {
@@ -15,4 +24,16 @@ h2 {
 
 .timeline-item {
   margin-bottom: 20px;
+}
+
+.text-muted {
+  color: #bbb !important;
+}
+
+a.text-light {
+  color: #bbb !important;
+}
+
+a.text-light:hover {
+  color: #fff !important;
 }
