@@ -31,3 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const phone = ['727', '505', '0626'].join('-');
+  document.getElementById('phone').textContent = phone;
+});
