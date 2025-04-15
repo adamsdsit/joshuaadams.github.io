@@ -327,7 +327,7 @@
             .leadership-expertise {
                 grid-template-columns: 1fr 1fr;
             }
-.header-top {
+                .header-top {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -335,8 +335,8 @@
 }
 
 .avatar-img {
-  width: 3em;
-  height: 3em;
+  width: 40px; /* Example thumbnail width */
+  height: 40px; /* Example thumbnail height */
   border-radius: 50%;
 }
         }
