@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ジョシュア・アダムズ | 認定事業継続専門家</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">ジョシュア・アダムズ</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">ホーム</a>
+        <a href="business-continuity.html" class="nav-link">事業継続</a>
+        <a href="research.html" class="nav-link">研究</a>
+        <a href="teaching.html" class="nav-link">教育</a>
+        <a href="#" class="nav-link active">履歴書</a>
+      </div>
+    </nav>
 
+    <header>
+      <h1>ジョシュア・アダムズ</h1>
+      <p class="title">認定事業継続専門家 (CBCP) | IT＆サイバーセキュリティのスペシャリスト | 研究者 | 教育者</p>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <span>📍</span>
+          <span>フロリダ州ハドソン</span>
+        </div>
+        <div class="contact-item">
+          <span>📧</span>
+          <a href="mailto:joshadams@protonmail.com">joshadams@protonmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span>📱</span>
+          <span id="phone"></span>
+        </div>
+        <div class="contact-item">
+          <span>🔗</span>
+          <a href="https://www.linkedin.com/in/adamdsit/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="summary">
+        <p>IT、サイバーセキュリティ、エンタープライズアーキテクチャの分野で20年以上の経験を持つ、ダイナミックで成果志向の専門家。技術プロジェクトマネジメント、ステークホルダー対応、クロスファンクショナルチームのリーダーシップに優れた実績。新技術の活用、データ分析、革新的なソリューション開発に精通。コーディング、技術的トラブルシューティング、AI/機械学習の経験あり。戦略的成長と顧客体験の向上に情熱を注ぐ。</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 ジョシュア・アダムズ. 無断転載を禁じます。</p>
+      <p><a href="https://github.com/adamsdsit/resume" target="_blank" style="color: var(--accent-color);">GitHubでソースを見る</a></p>
+      <p><a href="https://www.resilientconsultingsolutions.com/" target="_blank" style="color: var(--accent-color);">Resilient Consulting Solutions を訪問</a></p>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const phone = ['727', '505', '0626'].join('-');
+      const phoneElement = document.getElementById('phone');
+      if (phoneElement) phoneElement.textContent = phone;
+    });
+  </script>
+  <script src="scripts.js"></script>
+</body>
+</html>
