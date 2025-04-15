@@ -1,49 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teaching - Joshua Adams</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshua Adams | Teaching</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body class="bg-dark text-light">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">Joshua Adams</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
-      </ul>
-    </div>
-  </nav>
-
+<body>
   <div class="container">
-    <section id="teaching" class="my-5">
-      <h2 class="text-white">Teaching Experience</h2>
-      <div class="timeline">
-        <div class="timeline-item mb-4">
-          <h4 class="font-weight-bold text-white">Assistant Professor, Computer Information Systems - Saint Leo University</h4>
-          <p class="text-muted">2014 – Present</p>
-          <p>Developed and taught courses in cybersecurity, system analysis, software engineering, and cloud computing.</p>
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">Joshua Adams</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="business-continuity.html" class="nav-link">Business Continuity</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="teaching.html" class="nav-link active">Teaching</a>
+        <a href="#" class="nav-link">Resume</a>
+      </div>
+    </nav>
+
+    <header>
+      <h1>Joshua Adams</h1>
+      <p class="title">Certified Business Continuity Professional (CBCP) | IT & Cybersecurity Specialist | Researcher | Educator</p>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <span>📍</span>
+          <span>Hudson, FL</span>
         </div>
-        <div class="timeline-item mb-4">
-          <h4 class="font-weight-bold text-white">Assistant to the Director, QEP - Saint Leo University</h4>
-          <p class="text-muted">2020 – Present</p>
-          <p>Supported the Director in the implementation and management of the Quality Enhancement Plan (QEP).</p>
+        <div class="contact-item">
+          <span>📧</span>
+          <a href="mailto:joshadams@protonmail.com">joshadams@protonmail.com</a>
         </div>
-        <!-- Add more timeline items as needed -->
+        <div class="contact-item">
+          <span>📱</span>
+          <span id="phone"></span>
+        </div>
+        <div class="contact-item">
+          <span>🔗</span>
+          <a href="https://www.linkedin.com/in/adamdsit/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Teaching Experience</h2>
+
+      <div class="filter-controls">
+        <label for="teachingYearFilter">Filter by year:</label>
+        <select id="teachingYearFilter">
+          <option value="all">All</option>
+        </select>
+      </div>
+
+      <div class="experience-item">
+        <h3 class="item-title">Assistant Professor, Computer Information Systems</h3>
+        <p class="item-subtitle">Saint Leo University</p>
+        <p class="item-date">2014 – Present</p>
+        <ul class="highlights">
+          <li>Developed and taught courses in cybersecurity, system analysis, software engineering, and cloud computing.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3 class="item-title">Assistant to the Director, QEP</h3>
+        <p class="item-subtitle">Saint Leo University</p>
+        <p class="item-date">2020 – Present</p>
+        <ul class="highlights">
+          <li>Supported the Director in the implementation and management of the Quality Enhancement Plan (QEP).</li>
+        </ul>
       </div>
     </section>
+
+    <footer>
+      <p>© 2025 Joshua Adams. All rights reserved.</p>
+      <p><a href="https://github.com/adamsdsit/resume" target="_blank" style="color: var(--accent-color)">View Source on GitHub</a></p>
+      <p><a href="https://www.resilientconsultingsolutions.com/" target="_blank" style="color: var(--accent-color)">Visit Resilient Consulting Solutions</a></p>
+    </footer>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="js/scripts.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const phone = ['727', '505', '0626'].join('-');
+      const phoneElement = document.getElementById('phone');
+      if (phoneElement) phoneElement.textContent = phone;
+
+      const yearSet = new Set();
+      const yearFilter = document.getElementById("teachingYearFilter");
+
+      document.querySelectorAll(".experience-item").forEach(item => {
+        const text = item.querySelector(".item-date").textContent;
+        const matches = text.match(/\d{4}/g);
+        if (matches) {
+          matches.forEach(year => yearSet.add(year));
+        }
+      });
+
+      Array.from(yearSet).sort((a, b) => b - a).forEach(year => {
+        const opt = document.createElement("option");
+        opt.value = year;
+        opt.textContent = year;
+        yearFilter.appendChild(opt);
+      });
+
+      yearFilter.addEventListener("change", () => {
+        const year = yearFilter.value;
+        document.querySelectorAll(".experience-item").forEach(item => {
+          const text = item.querySelector(".item-date").textContent;
+          if (year === "all" || text.includes(year)) {
+            item.style.display = "";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
-
