@@ -20,3 +20,14 @@ links.forEach(link => {
     link.classList.add('active');
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll('.nav-link');
+  const currentPath = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    const linkPath = link.getAttribute('href');
+    if (linkPath === currentPath || (linkPath === 'index.html' && currentPath === '')) {
+      link.classList.add('active');
+    }
+  });
+});
