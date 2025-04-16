@@ -11,7 +11,7 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.7;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9; /* Lighter background color */
     padding: 0;
 }
 
@@ -415,7 +415,7 @@ ul:not(.item-highlights) > li::before {
 /* Footer Styles */
 .main-footer {
     background-color: #34495e; /* Slightly lighter footer background */
-    color: black;
+    color: #ffffff;
     padding: 2rem 0;
     text-align: center;
     margin-top: 4rem;
