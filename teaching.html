@@ -1,122 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cybersecurity Fundamentals – Syllabus</title>
-  <link rel="stylesheet" href="../styles.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joshua Adams | Teaching</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
 </head>
-<body>
-  <div class="container">
-    <nav class="navbar">
-      <a href="../index.html" class="nav-brand">Joshua Adams</a>
-      <div class="nav-links">
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="../business-continuity.html" class="nav-link">Business Continuity</a>
-        <a href="../research.html" class="nav-link">Research</a>
-        <a href="../teaching.html" class="nav-link active">Teaching</a>
-        <a href="#" class="nav-link">Resume</a>
-      </div>
-    </nav>
+<body class="light-mode">
+    <div class="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <a href="/" class="nav-brand">Joshua Adams</a>
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">☰</button>
+                <div class="nav-links-container" id="nav-links-container">
+                    <ul class="nav-links" id="nav-links">
+                        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="/research" class="nav-link">Research</a></li>
+                        <li class="nav-item"><a href="/teaching" class="nav-link active">Teaching</a></li>
+                        <li class="nav-item"><a href="/business-continuity" class="nav-link">Business Continuity</a></li>
+                         <li class="nav-item"><a href="/projects" class="nav-link">Projects</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="hero">
+                <img src="avatar.png" alt="Joshua Adams" class="hero-avatar">
+                <div class="hero-content">
+                    <h1>Joshua Adams</h1>
+                    <p class="hero-title">Certified Business Continuity Professional (CBCP) | IT & Cybersecurity Specialist | Researcher | Educator</p>
+                    <ul class="contact-list">
+                        <li class="contact-item"><span class="icon">📍</span> Hudson, FL</li>
+                        <li class="contact-item"><span class="icon">📧</span> <span id="email"></span></li>
+                         <li class="contact-item"><span>📱</span> <span id="phone"></span></li>
+                        <li class="contact-item"><span class="icon">🔗</span> <a href="https://www.linkedin.com/in/adamdsit/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
 
-    <header>
-      <h1>Joshua Adams</h1>
-      <p class="title">Certified Business Continuity Professional (CBCP) | IT & Cybersecurity Specialist | Researcher | Educator</p>
+        <main class="main-content">
+            <section class="section teaching-section" id="teaching">
+                <h2 class="section-title">Teaching</h2>
+                <p>
+                    I am passionate about providing high-quality, accessible education to anyone, anywhere. My teaching philosophy is centered around project-based learning and a holistic approach, drawing upon the principles of the ANISA Model.
+                </p>
 
-      <div class="contact-info">
-        <div class="contact-item">
-          <span>📍</span>
-          <span>Hudson, FL</span>
-        </div>
-        <div class="contact-item">
-          <span>📧</span>
-          <a href="mailto:joshadams@protonmail.com">joshadams@protonmail.com</a>
-        </div>
-        <div class="contact-item">
-          <span>📱</span>
-          <span id="phone"></span>
-        </div>
-        <div class="contact-item">
-          <span>🔗</span>
-          <a href="https://www.linkedin.com/in/adamdsit/" target="_blank">LinkedIn</a>
-        </div>
-      </div>
-    </header>
+                <h3>Teaching Experience</h3>
+                 <ul class="timeline">
+                    <li class="timeline-item">
+                        <h4 class="item-title">Assistant Professor, Computer Information Systems</h4>
+                        <p class="item-subtitle">Saint Leo University</p>
+                        <p class="item-date">2014 – Present</p>
+                         <ul class="item-highlights">
+                            <li>Developed and taught courses in cybersecurity, system analysis, software engineering, and cloud computing, effectively preparing students for industry challenges.</li>
+                            <li>Partnered with Carnegie Mellon University on grant collaborations, securing funding and ensuring curriculum relevance.</li>
+                            <li>Integrated emerging technologies into academic curricula, focusing on cloud security and cybersecurity.</li>
+                         </ul>
+                    </li>
+                    <li class="timeline-item">
+                         <h4 class="item-title">Education Consultant</h4>
+                        <p class="item-subtitle">Carnegie Mellon University</p>
+                        <p class="item-date">Jan 2021 - Present</p>
+                         <ul class="item-highlights">
+                            <li>Facilitated the development of high-level projects using GCP and Azure, improving student learning and job readiness.</li>
+                            <li>Coordinated professional development activities for educators, focusing on best practices for teaching special populations.</li>
+                         </ul>
+                    </li>
+                 </ul>
 
-    <section class="section">
-  <h2 class="section-title">Teaching Experience</h2>
+                <h3>Teaching Philosophy</h3>
+                <p>
+                    I believe in empowering students to become active learners by engaging them in hands-on, real-world projects. This approach fosters critical thinking, problem-solving skills, and collaboration, preparing them for success in their future careers.
+                </p>
 
-  <p>Below is a detailed breakdown of my teaching experience, curriculum development, and pedagogy. Click on each item to expand details about courses taught, innovations introduced, and formats used.</p>
+                <h3>The ANISA Model</h3>
+                <p>
+                    My teaching is informed by the ANISA Model, which emphasizes the development of the whole person, including intellectual, emotional, social, and ethical dimensions. I strive to create a learning environment that nurtures students' individual talents and fosters their growth as responsible and engaged citizens.
+                </p>
 
-  <div class="filter-controls" style="margin-bottom: 2rem;">
-    <label for="teachingYearFilter">Filter by year:</label>
-    <select id="teachingYearFilter">
-      <option value="all">All</option>
-    </select>
-  </div>
+                <h3>Project-Based Certification</h3>
+                <p>
+                    I am committed to providing students with opportunities to earn project-based certifications that validate their skills and knowledge in a practical, industry-relevant way. These certifications can enhance their employability and demonstrate their mastery of key competencies.
+                </p>
 
-  <details class="experience-item" open>
-    <summary><strong>Assistant Professor, Computer Information Systems</strong> – Saint Leo University <span class="item-date">2014 – Present</span></summary>
-    <ul class="highlights">
-      <li>Designed and instructed undergraduate and graduate-level courses, including:</li>
-      <ul>
-        <li>Cybersecurity Fundamentals</li>
-        <li>Advanced Cloud Computing & Virtualization</li>
-        <li>Systems Analysis and Design</li>
-        <li>Software Engineering</li>
-        <li>IT Project Management</li>
-        <li>Capstone Project Supervision (Undergrad & Graduate)</li>
-      </ul>
-      <li>Led hybrid and online course delivery, incorporating Microsoft Azure, AWS Academy, and Google Cloud curriculum.</li>
-      <li>Integrated ethical hacking labs, cloud sandbox environments, and simulation-based assessments.</li>
-      <li>Conducted continuous syllabus redesigns aligned with ABET and NSA CAE-C requirements.</li>
-      <li>Collaborated with industry leaders and research centers (e.g., Carnegie Mellon, Microsoft) to maintain curriculum relevance.</li>
-    </ul>
-  </details>
+                <h3>Course Syllabi</h3>
+                <p>
+                    The following are syllabi for the courses I teach:
+                </p>
+                <ul class="course-list">
+                    <li class="course-item"><a href="/cybersecurity-syllabus">Cybersecurity Fundamentals</a></li>
+                    <li class="course-item"><a href="/cloud-computing-ai-syllabus">Cloud Computing and Artificial Intelligence</a></li>
+                    <li class="course-item"><a href="/basic-computer-syllabus">Basic Computer Skills</a></li>
+                </ul>
+            </section>
+        </main>
 
-  <details class="experience-item">
-    <summary><strong>Assistant to the Director, QEP</strong> – Saint Leo University <span class="item-date">2020 – Present</span></summary>
-    <ul class="highlights">
-      <li>Supported execution of institutional quality enhancement strategies and compliance with SACS accreditation metrics.</li>
-      <li>Led faculty training workshops focused on integrating writing-intensive components into technical courses.</li>
-      <li>Developed metrics and assessments tracking student learning outcomes and long-term retention improvements.</li>
-    </ul>
-  </details>
-
-  <details class="experience-item">
-    <summary><strong>Teaching Philosophy</strong></summary>
-    <ul class="highlights">
-      <li>I believe education is a dynamic and collaborative journey. My approach integrates industry relevance, hands-on exploration, and the fostering of ethical, socially responsible tech leaders.</li>
-      <li>Every student, regardless of background, brings value. I center inclusivity and adapt my delivery to support all learning styles.</li>
-      <li>Incorporating tools such as cloud platforms, collaborative Git workflows, and interactive simulation labs is key to helping students become lifelong learners and agile contributors in tech-driven environments.</li>
-    </ul>
-  </details>
-</section>
-
-<section class="section">
-  <h2 class="section-title">Sample Course Syllabi</h2>
-  <ul class="highlights">
-    <li><a href="syllabi/cybersecurity_fundamentals.html" class="nav-link" target="_blank">Cybersecurity Fundamentals</a> – Core concepts in network and system security, risk analysis, and mitigation techniques.</li>
-    <li><a href="syllabi/cloud_computing.html" class="nav-link" target="_blank">Advanced Cloud Computing</a> – Cloud architecture, virtual networks, containerization, and provider services (Azure, AWS, GCP).</li>
-    <li><a href="syllabi/software_engineering.html" class="nav-link" target="_blank">Software Engineering</a> – Agile practices, UML, design patterns, and project documentation methodologies.</li>
-  </ul>
-</section>
-
-    <footer>
-      <p>© 2025 Joshua Adams. All rights reserved.</p>
-      <p><a href="https://github.com/adamsdsit/resume" target="_blank" style="color: var(--accent-color)">View Source on GitHub</a></p>
-      <p><a href="https://www.resilientconsultingsolutions.com/" target="_blank" style="color: var(--accent-color)">Visit Resilient Consulting Solutions</a></p>
-      <p><a href="../teaching.html">← Back to Teaching Page</a></p>
-    </footer>
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const phone = ['727', '505', '0626'].join('-');
-      const phoneElement = document.getElementById('phone');
-      if (phoneElement) phoneElement.textContent = phone;
-    });
-  </script>
+        <footer class="main-footer">
+            <p>© 2025 Joshua Adams. All rights reserved.</p>
+            <p><a href="https://github.com/adamsdsit/resume" target="_blank" rel="noopener noreferrer">View Source on GitHub</a></p>
+            <p><a href="https://www.resilientconsultingsolutions.com/" target="_blank" rel="noopener noreferrer">Visit Resilient Consulting Solutions</a></p>
+        </footer>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
