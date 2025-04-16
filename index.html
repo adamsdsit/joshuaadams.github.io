@@ -4,375 +4,308 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joshua Adams | Certified Business Continuity Professional</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script> </head>
 <body>
     <div class="container">
-        <nav class="navbar">
-            <a href="index.html" class="nav-brand">Joshua Adams</a>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="business-continuity.html" class="nav-link">Business Continuity</a>
-                <a href="research.html" class="nav-link">Research</a>
-                <a href="teaching.html" class="nav-link">Teaching</a>
-                <a href="#" class="nav-link active">Resume</a>
-                <a href="adamsjapanese.html" class="nav-link">日本語</a>
-            </div>
-        </nav>
-
-        <header class="header">
-            <div class="header-top">
-                <img src="avatar.png" alt="Joshua avatar" class="avatar-img">
-                <div class="contact-info-container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <a href="/" class="nav-brand">Joshua Adams</a>
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">☰</button>
+                <div class="nav-links-container" id="nav-links-container">
+                    <ul class="nav-links" id="nav-links">
+                        <li class="nav-item"><a href="/" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="/business-continuity.html" class="nav-link">Business Continuity</a></li>
+                        <li class="nav-item"><a href="/research.html" class="nav-link">Research</a></li>
+                        <li class="nav-item"><a href="/teaching.html" class="nav-link">Teaching</a></li>
+                        <li class="nav-item"><a href="/resume.html" class="nav-link">Resume</a></li>
+                        <li class="nav-item"><a href="/adamsjapanese.html" class="nav-link">日本語</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="hero">
+                <img src="avatar.png" alt="Joshua Adams" class="hero-avatar">
+                <div class="hero-content">
                     <h1>Joshua Adams</h1>
-                    <p class="title">Certified Business Continuity Professional (CBCP) | IT & Cybersecurity Specialist | Researcher | Educator</p>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <span>📍</span>
-                            <span>Hudson, FL</span>
-                        </div>
-                        <div class="contact-item">
-                            <span>📧</span>
-                            <a href="mailto:joshadams@protonmail.com">joshadams@protonmail.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <span>📱</span>
-                            <span id="phone"></span>
-                        </div>
-                        <div class="contact-item">
-                            <span>🔗</span>
-                            <a href="https://www.linkedin.com/in/adamdsit/" target="_blank">LinkedIn</a>
-                        </div>
-                    </div>
+                    <p class="hero-title">Certified Business Continuity Professional (CBCP) | IT & Cybersecurity Specialist | Researcher | Educator</p>
+                     <ul class="contact-list">
+                        <li class="contact-item"><span class="icon">📍</span> Hudson, FL</li>
+                        <li class="contact-item"><span class="icon">📧</span> <a href="mailto:joshadams@protonmail.com">joshadams@protonmail.com</a></li>
+                        <li class="contact-item"><span class="icon">🔗</span> <a href="https://www.linkedin.com/in/adamdsit/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    </ul>
+                    <a href="/resume.pdf" class="button">Download Resume (PDF)</a>
                 </div>
             </div>
         </header>
 
-        <section class="section summary-section">
-            <div class="summary">
+        <main class="main-content">
+            <section class="section summary-section" id="summary">
+                <h2>Summary</h2>
                 <p>Dynamic and results-driven professional with over 20 years of experience in IT, cybersecurity, and enterprise architecture. Certified Business Continuity Professional (CBCP) with proven expertise in technical project management, stakeholder management, and leading cross-functional teams. Adept at leveraging emerging technologies, data analysis, and developing innovative solutions. Experienced in coding, technical troubleshooting, and AI/machine learning. Passionate about driving strategic growth and improving customer experience.</p>
-            </div>
-        </section>
+            </section>
 
-        <section class="section experience-section">
-            <h2 class="section-title">Professional Experience</h2>
-
-            <div class="experience-item">
-                <div class="item-header">
-                    <div>
+            <section class="section experience-section" id="experience">
+                <h2>Professional Experience</h2>
+                <article class="experience-item">
+                    <div class="item-header">
                         <h3 class="item-title">Sr Manager</h3>
                         <p class="item-subtitle">Veterans Business Continuity Professionals, LLC</p>
+                        <p class="item-date">August 2023 - Present</p>
                     </div>
-                    <p class="item-date">August 2023 - Present</p>
-                </div>
-                <ul class="highlights">
-                    <li>Lead veterans-corporate CBCP thinktank and action group in US analyzing and helping companies, including four Fortune 150 companies and nonprofits prepare, respond and recover from manmade and natural disasters</li>
-                    <li>Created Enterprise Resilience Office architecture aligning senior leaders to understand the need for a resilience program consisting of BC, CM, IT operations, Information Security and Physical Security</li>
-                    <li>Developed and implemented BC and CM program planning focused on business resiliency with significant supplier base providing critical business functions</li>
-                    <li>Created programs to align against regulatory mandates requiring extensive coordination with primary functions and compliance offices</li>
-                    <li>Deployed technology solutions for cost-effective corporate crisis communication across geographically dispersed workforces</li>
-                </ul>
-            </div>
+                    <ul class="item-highlights">
+                        <li>Lead veterans-corporate CBCP thinktank and action group in US analyzing and helping companies, including four Fortune 150 companies and nonprofits prepare, respond and recover from manmade and natural disasters</li>
+                        <li>Created Enterprise Resilience Office architecture aligning senior leaders to understand the need for a resilience program consisting of BC, CM, IT operations, Information Security and Physical Security</li>
+                        <li>Developed and implemented BC and CM program planning focused on business resiliency with significant supplier base providing critical business functions</li>
+                        <li>Created programs to align against regulatory mandates requiring extensive coordination with primary functions and compliance offices</li>
+                        <li>Deployed technology solutions for cost-effective corporate crisis communication across geographically dispersed workforces</li>
+                    </ul>
+                </article>
 
-            <div class="experience-item">
-                <div class="item-header">
-                    <div>
+                <article class="experience-item">
+                    <div class="item-header">
                         <h3 class="item-title">Principal Resilience and IT Consultant</h3>
                         <p class="item-subtitle">FlexAMS</p>
+                        <p class="item-date">2018 - Present</p>
                     </div>
-                    <p class="item-date">2018 - Present</p>
-                </div>
-                <ul class="highlights">
-                    <li>Created and presented metrics to steering committees on resilience program health, training, and technology requirements</li>
-                    <li>Developed strategy for IT and resilience operations tailored to limited resources to effectively match resource use with time and need</li>
-                    <li>Conducted training sessions and exercises to evaluate IT/DR plan effectiveness and identify opportunities for improvements</li>
-                    <li>Developed crisis communications plans to ensure timely and accurate information dissemination during crises</li>
-                    <li>Assisted in developing cost estimates for risk assessments, BIAs, planning, and crisis software requirements</li>
-                </ul>
-            </div>
+                    <ul class="item-highlights">
+                        <li>Created and presented metrics to steering committees on resilience program health, training, and technology requirements</li>
+                        <li>Developed strategy for IT and resilience operations tailored to limited resources to effectively match resource use with time and need</li>
+                        <li>Conducted training sessions and exercises to evaluate IT/DR plan effectiveness and identify opportunities for improvements</li>
+                        <li>Developed crisis communications plans to ensure timely and accurate information dissemination during crises</li>
+                        <li>Assisted in developing cost estimates for risk assessments, BIAs, planning, and crisis software requirements</li>
+                    </ul>
+                </article>
 
-            <div class="experience-item">
-                <div class="item-header">
-                    <div>
+                <article class="experience-item">
+                    <div class="item-header">
                         <h3 class="item-title">Assistant Professor, Computer Information Systems</h3>
                         <p class="item-subtitle">Saint Leo University</p>
+                        <p class="item-date">2014 - Present</p>
                     </div>
-                    <p class="item-date">2014 - Present</p>
-                </div>
-                <ul class="highlights">
-                    <li>Developed and taught courses in cybersecurity, system analysis, software engineering, and cloud computing</li>
-                    <li>Partnered with Carnegie Mellon University on grant collaborations, securing funding and ensuring curriculum relevance</li>
-                    <li>Integrated emerging technologies into academic curricula, focusing on cloud security and cybersecurity</li>
-                    <li>Led development sessions for educators, incorporating cloud computing concepts and cybersecurity best practices</li>
-                    <li>Established strategic partnerships with industry leaders like Microsoft and Google, enhancing educational offerings</li>
-                </ul>
-            </div>
+                    <ul class="item-highlights">
+                        <li>Developed and taught courses in cybersecurity, system analysis, software engineering, and cloud computing</li>
+                        <li>Partnered with Carnegie Mellon University on grant collaborations, securing funding and ensuring curriculum relevance</li>
+                        <li>Integrated emerging technologies into academic curricula, focusing on cloud security and cybersecurity</li>
+                        <li>Led development sessions for educators, incorporating cloud computing concepts and cybersecurity best practices</li>
+                        <li>Established strategic partnerships with industry leaders like Microsoft and Google, enhancing educational offerings</li>
+                    </ul>
+                </article>
 
-            <div class="experience-item">
-                <div class="item-header">
-                    <div>
+                <article class="experience-item">
+                    <div class="item-header">
                         <h3 class="item-title">Enterprise Architect Engineer and Researcher</h3>
                         <p class="item-subtitle">Mangata</p>
+                        <p class="item-date">July 2022 - June 2023</p>
                     </div>
-                    <p class="item-date">July 2022 - June 2023</p>
-                </div>
-                <ul class="highlights">
-                    <li>Optimized operational processes and developed scalable, fault-tolerant architecture for cloud deployments</li>
-                    <li>Conducted technical assessments influencing strategic decisions, improving application reliability and reducing costs</li>
-                    <li>Collaborated with cross-functional teams to ensure optimal performance and continuous improvement of applications</li>
-                    <li>Managed a significant 3 million GBP grant, showcasing strong financial acumen and strategic planning skills</li>
-                </ul>
-            </div>
+                    <ul class="item-highlights">
+                        <li>Optimized operational processes and developed scalable, fault-tolerant architecture for cloud deployments</li>
+                        <li>Conducted technical assessments influencing strategic decisions, improving application reliability and reducing costs</li>
+                        <li>Collaborated with cross-functional teams to ensure optimal performance and continuous improvement of applications</li>
+                        <li>Managed a significant 3 million GBP grant, showcasing strong financial acumen and strategic planning skills</li>
+                    </ul>
+                </article>
 
-            <div class="experience-item">
-                <div class="item-header">
-                    <div>
+                <article class="experience-item">
+                    <div class="item-header">
                         <h3 class="item-title">Health Services Technician & Leadership Roles</h3>
                         <p class="item-subtitle">U.S. Coast Guard</p>
+                        <p class="item-date">1995 - 2015</p>
                     </div>
-                    <p class="item-date">1995 - 2015</p>
-                </div>
-                <ul class="highlights">
-                    <li>Managed active-duty enlisted members at a Coast Guard clinic, providing comprehensive medical support</li>
-                    <li>Played a key role in responding to crises such as the Haitian migration crisis and Gulf of Mexico oil spill</li>
-                    <li>Organized and deployed for Hurricane Katrina, collaborating with FEMA and other agencies</li>
-                    <li>Developed and executed crisis communication plans, ensuring timely and accurate information dissemination</li>
-                    <li>Led training initiatives in emergency medicine and medical laboratory techniques</li>
-                </ul>
-            </div>
-        </section>
+                    <ul class="item-highlights">
+                        <li>Managed active-duty enlisted members at a Coast Guard clinic, providing comprehensive medical support</li>
+                        <li>Played a key role in responding to crises such as the Haitian migration crisis and Gulf of Mexico oil spill</li>
+                        <li>Organized and deployed for Hurricane Katrina, collaborating with FEMA and other agencies</li>
+                        <li>Developed and executed crisis communication plans, ensuring timely and accurate information dissemination</li>
+                        <li>Led training initiatives in emergency medicine and medical laboratory techniques</li>
+                    </ul>
+                </article>
+            </section>
 
-        <section class="section leadership-section">
-            <h2 class="section-title">Leadership Expertise</h2>
-            <div class="leadership-expertise">
-                <div class="expertise-item">
-                    <div class="expertise-icon">👥</div>
-                    <p>Team Building & Management</p>
+            <section class="section leadership-section" id="leadership">
+                <h2>Leadership Expertise</h2>
+                <div class="expertise-grid">
+                    <div class="expertise-item"><span class="icon">👥</span> Team Building & Management</div>
+                    <div class="expertise-item"><span class="icon">🤝</span> Cross-Functional Collaboration</div>
+                    <div class="expertise-item"><span class="icon">⚖️</span> Conflict Resolution</div>
+                    <div class="expertise-item"><span class="icon">📈</span> Business Development</div>
+                    <div class="expertise-item"><span class="icon">🧭</span> Organizational Strategy</div>
+                    <div class="expertise-item"><span class="icon">🔄</span> Digital Transformation</div>
+                    <div class="expertise-item"><span class="icon">📊</span> Portfolio Management</div>
+                    <div class="expertise-item"><span class="icon">📜</span> Regulatory Compliance</div>
                 </div>
-                <div class="expertise-item">
-                    <div class="expertise-icon">🤝</div>
-                    <p>Cross-Functional Collaboration</p>
-                </div>
-                <div class="expertise-item">
-                    <div class="expertise-icon">⚖️</div>
-                    <p>Conflict Resolution</p>
-                </div>
-                <div class="expertise-item">
-                    <div class="expertise-icon">📈</div>
-                    <p>Business Development</p>
-                </div>
-                <div class="expertise-item">
-                    <div class="expertise-icon">🧭</div>
-                    <p>Organizational Strategy</p>
-                </div>
-                <div class="expertise-item">
-                    <div class="expertise-icon">🔄</div>
-                    <p>Digital Transformation</p>
-                </div>
-                <div class="expertise-item">
-                    <div class="expertise-icon">📊</div>
-                    <p>Portfolio Management</p>
-                </div>
-                <div class="expertise-item">
-                    <div class="expertise-icon">📜</div>
-                    <p>Regulatory Compliance</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="section technical-skills-section">
-            <h2 class="section-title">Technical Proficiency</h2>
-            <div class="skills-container">
-                <div class="skill-group">
-                    <h3>Domains</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Software Development</span>
-                        <span class="skill-item">Systems Engineering</span>
-                        <span class="skill-item">Cloud Engineering</span>
-                        <span class="skill-item">Solutions Architecture</span>
-                        <span class="skill-item">Enterprise Architecture</span>
-                        <span class="skill-item">Security Architecture</span>
-                        <span class="skill-item">DevOps</span>
-                        <span class="skill-item">DevSecOps</span>
+            <section class="section skills-section" id="skills">
+                <h2>Technical Proficiency</h2>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h3>Domains</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item">Software Development</li>
+                            <li class="skill-item">Systems Engineering</li>
+                            <li class="skill-item">Cloud Engineering</li>
+                            <li class="skill-item">Solutions Architecture</li>
+                            <li class="skill-item">Enterprise Architecture</li>
+                            <li class="skill-item">Security Architecture</li>
+                            <li class="skill-item">DevOps</li>
+                            <li class="skill-item">DevSecOps</li>
+                        </ul>
                     </div>
-                </div>
-
-                <div class="skill-group">
-                    <h3>Development</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">SDLC</span>
-                        <span class="skill-item">Continuous Improvement</span>
-                        <span class="skill-item">Network Programming</span>
-                        <span class="skill-item">Cloud Migration</span>
-                        <span class="skill-item">Distributed Systems</span>
-                        <span class="skill-item">Microservices</span>
-                        <span class="skill-item">Containerization</span>
-                        <span class="skill-item">CI/CD</span>
-                        <span class="skill-item">IaC</span>
-                        <span class="skill-item">Automation</span>
+                    <div class="skill-group">
+                        <h3>Development</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item">SDLC</li>
+                            <li class="skill-item">Continuous Improvement</li>
+                            <li class="skill-item">Network Programming</li>
+                            <li class="skill-item">Cloud Migration</li>
+                            <li class="skill-item">Distributed Systems</li>
+                            <li class="skill-item">Microservices</li>
+                            <li class="skill-item">Containerization</li>
+                            <li class="skill-item">CI/CD</li>
+                            <li class="skill-item">IaC</li>
+                            <li class="skill-item">Automation</li>
+                        </ul>
                     </div>
-                </div>
-
-                <div class="skill-group">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">C</span>
-                        <span class="skill-item">C++</span>
-                        <span class="skill-item">Java</span>
-                        <span class="skill-item">JSON</span>
-                        <span class="skill-item">YAML</span>
-                        <span class="skill-item">Shell Scripting</span>
+                    <div class="skill-group">
+                        <h3>Programming Languages</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item">Python</li>
+                            <li class="skill-item">C</li>
+                            <li class="skill-item">C++</li>
+                            <li class="skill-item">Java</li>
+                            <li class="skill-item">JSON</li>
+                            <li class="skill-item">YAML</li>
+                            <li class="skill-item">Shell Scripting</li>
+                        </ul>
                     </div>
-                </div>
-
-                <div class="skill-group">
-                    <h3>Cloud & Infrastructure</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">GCP</span>
-                        <span class="skill-item">Azure</span>
-                        <span class="skill-item">Kubernetes</span>
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">Terraform</span>
-                        <span class="skill-item">Ansible</span>
-                        <span class="skill-item">Puppet</span>
-                        <span class="skill-item">Azure DevOps</span>
-                        <span class="skill-item">GitHub</span>
+                    <div class="skill-group">
+                        <h3>Cloud & Infrastructure</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item">GCP</li>
+                            <li class="skill-item">Azure</li>
+                            <li class="skill-item">Kubernetes</li>
+                            <li class="skill-item">Docker</li>
+                            <li class="skill-item">Terraform</li>
+                            <li class="skill-item">Ansible</li>
+                            <li class="skill-item">Puppet</li>
+                            <li class="skill-item">Azure DevOps</li>
+                            <li class="skill-item">GitHub</li>
+                        </ul>
                     </div>
-                </div>
-
-                <div class="skill-group">
-                    <h3>Databases & Architecture</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">NoSQL</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">MongoDB</span>
-                        <span class="skill-item">Cosmos DB</span>
-                        <span class="skill-item">Azure SQL</span>
-                        <span class="skill-item">Postgres</span>
-                        <span class="skill-item">OOD</span>
-                        <span class="skill-item">Cloud Native</span>
-                        <span class="skill-item">SOA</span>
-                        <span class="skill-item">TOGAF</span>
-                        <span class="skill-item">ITIL</span>
+                    <div class="skill-group">
+                        <h3>Databases & Architecture</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item">NoSQL</li>
+                            <li class="skill-item">SQL</li>
+                            <li class="skill-item">MongoDB</li>
+                            <li class="skill-item">Cosmos DB</li>
+                            <li class="skill-item">Azure SQL</li>
+                            <li class="skill-item">Postgres</li>
+                            <li class="skill-item">OOD</li>
+                            <li class="skill-item">Cloud Native</li>
+                            <li class="skill-item">SOA</li>
+                            <li class="skill-item">TOGAF</li>
+                            <li class="skill-item">ITIL</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Business Continuity</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item">Risk Assessment</li>
+                            <li class="skill-item">Business Impact Analysis</li>
+                            <li class="skill-item">Disaster Recovery</li>
+                            <li class="skill-item">Crisis Management</li>
+                            <li class="skill-item">Incident Response</li>
+                            <li class="skill-item">Business Continuity Planning</li>
+                            <li class="skill-item">ISO 22301</li>
+                        </ul>
                     </div>
                 </div>
+            </section>
 
-                <div class="skill-group">
-                    <h3>Business Continuity</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Risk Assessment</span>
-                        <span class="skill-item">Business Impact Analysis</span>
-                        <span class="skill-item">Disaster Recovery</span>
-                        <span class="skill-item">Crisis Management</span>
-                        <span class="skill-item">Incident Response</span>
-                        <span class="skill-item">Business Continuity Planning</span>
-                        <span class="skill-item">ISO 22301</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section education-section">
-            <h2 class="section-title">Education</h2>
-
-            <div class="education-item">
-                <div class="item-header">
-                    <div>
+            <section class="section education-section" id="education">
+                <h2>Education</h2>
+                <article class="education-item">
+                    <div class="item-header">
                         <h3 class="item-title">Doctorate in Information Technology</h3>
                         <p class="item-subtitle">Walden University</p>
+                        <p class="item-date">2020</p>
                     </div>
-                    <p class="item-date">2020</p>
-                </div>
-            </div>
-
-            <div class="education-item">
-                <div class="item-header">
-                    <div>
+                </article>
+                <article class="education-item">
+                    <div class="item-header">
                         <h3 class="item-title">Graduate Certificate in Artificial Intelligence</h3>
                         <p class="item-subtitle">Stanford University</p>
+                        <p class="item-date">2021 - Present</p>
                     </div>
-                    <p class="item-date">2021 - Present</p>
-                </div>
-            </div>
-
-            <div class="education-item">
-                <div class="item-header">
-                    <div>
+                </article>
+                <article class="education-item">
+                    <div class="item-header">
                         <h3 class="item-title">M.Sc. in Information Technology</h3>
                         <p class="item-subtitle">Walden University</p>
+                        <p class="item-date">2014 - 2016</p>
                     </div>
-                    <p class="item-date">2014 - 2016</p>
-                </div>
-            </div>
-
-            <div class="education-item">
-                <div class="item-header">
-                    <div>
+                </article>
+                <article class="education-item">
+                    <div class="item-header">
                         <h3 class="item-title">MBA in Information Security Management</h3>
                         <p class="item-subtitle">Saint Leo University</p>
+                        <p class="item-date">2012 - 2014</p>
                     </div>
-                    <p class="item-date">2012 - 2014</p>
-                </div>
-            </div>
-
-            <div class="education-item">
-                <div class="item-header">
-                    <div>
+                </article>
+                 <article class="education-item">
+                    <div class="item-header">
                         <h3 class="item-title">BS in Business Administration & BA in Mass Communication</h3>
                         <p class="item-subtitle">University of South Florida</p>
+                        <p class="item-date">2012 - 2014</p>
                     </div>
-                    <p class="item-date">2012 - 2014</p>
-                </div>
-            </div>
-        </section>
+                </article>
+            </section>
 
-        <section class="section certifications-section">
-            <h2 class="section-title">Certifications</h2>
-            <div class="certifications">
-                <div class="certification">
-                    <h4>Certified Business Continuity Professional (CBCP)</h4>
-                    <p>DRI International, 2023</p>
-                </div>
-                <div class="certification">
-                    <h4>EMT Certification</h4>
-                    <p>Professional medical emergency response certification</p>
-                </div>
-                <div class="certification">
-                    <h4>Field Management of Chemical and Biological Incidents</h4>
-                    <p>US Army</p>
-                </div>
-                <div class="certification">
-                    <h4>Independent Health Services Technician</h4>
-                    <p>US Navy Health Science</p>
-                </div>
-            </div>
-        </section>
+            <section class="section certifications-section" id="certifications">
+                <h2>Certifications</h2>
+                <ul class="certification-list">
+                    <li class="certification-item">
+                        <h4 class="certification-title">Certified Business Continuity Professional (CBCP)</h4>
+                        <p class="certification-org">DRI International, 2023</p>
+                    </li>
+                    <li class="certification-item">
+                        <h4 class="certification-title">EMT Certification</h4>
+                        <p class="certification-org">Professional medical emergency response certification</p>
+                    </li>
+                     <li class="certification-item">
+                        <h4 class="certification-title">Field Management of Chemical and Biological Incidents</h4>
+                        <p class="certification-org">US Army</p>
+                    </li>
+                    <li class="certification-item">
+                         <h4 class="certification-title">Independent Health Services Technician</h4>
+                        <p class="certification-org">US Navy Health Science</p>
+                    </li>
+                </ul>
+            </section>
 
-        <section class="section awards-section">
-            <h2 class="section-title">Awards & Recognition</h2>
-            <ul class="highlights">
-                <li>Coast Guard Achievement Medal (Gold Star)</li>
-                <li>Coast Guard Unit Commendation Ribbon (x2)</li>
-                <li>Coast Guard Meritorious Team Commendation Ribbon (Silver Star)</li>
-                <li>Commandant Letter of Commendation (x2 Gold Stars)</li>
-                <li>Coast Guard Presidential Unit Citation Ribbon</li>
-                <li>Coast Guard Sea Service Ribbon</li>
-                <li>Saint Leo 5-year Service Award, 2019</li>
-            </ul>
-        </section>
+            <section class="section awards-section" id="awards">
+                <h2>Awards & Recognition</h2>
+                <ul class="awards-list">
+                    <li class="award-item">Coast Guard Achievement Medal (Gold Star)</li>
+                    <li class="award-item">Coast Guard Unit Commendation Ribbon (x2)</li>
+                    <li class="award-item">Coast Guard Meritorious Team Commendation Ribbon (Silver Star)</li>
+                    <li class="award-item">Commandant Letter of Commendation (x2 Gold Stars)</li>
+                    <li class="award-item">Coast Guard Presidential Unit Citation Ribbon</li>
+                    <li class="award-item">Coast Guard Sea Service Ribbon</li>
+                    <li class="award-item">Saint Leo 5-year Service Award, 2019</li>
+                </ul>
+            </section>
+        </main>
 
-        <div class="download-btn">
-            <a href="#" class="btn">Download Full Resume (PDF)</a>
-        </div>
-
-        <footer>
+        <footer class="main-footer">
             <p>© 2025 Joshua Adams. All rights reserved.</p>
-            <p><a href="https://github.com/adamsdsit/resume" target="_blank" style="color: var(--accent-color);">View Source on GitHub</a></p>
-            <p><a href="https://www.resilientconsultingsolutions.com/" target="_blank" style="color: var(--accent-color);">Visit Resilient Consulting Solutions</a></p>
+            <p><a href="https://github.com/adamsdsit/resume" target="_blank" rel="noopener noreferrer">View Source on GitHub</a></p>
+            <p><a href="https://www.resilientconsultingsolutions.com/" target="_blank" rel="noopener noreferrer">Visit Resilient Consulting Solutions</a></p>
         </footer>
     </div>
-    <script src="scripts.js"></script>
 </body>
 </html>
