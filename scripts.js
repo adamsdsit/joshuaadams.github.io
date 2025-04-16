@@ -10,36 +10,24 @@ $(document).ready(function() {
             $('#nav-links-container').removeClass('show');
         }
     });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Smooth scrolling for nav links
-    const navLinks = document.querySelectorAll('a.nav-link[href^="#"]');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
+    // Obfuscate email and phone number
+    const emailParts = ["joshadams", "protonmail", "com"];
+    const obfuscatedEmail = emailParts.join('@');
+    $('#email').text(obfuscatedEmail);
+    $('#email').attr('href', 'mailto:' + obfuscatedEmail);
 
-    // Highlight active nav link
-    const links = document.querySelectorAll('.nav-link');
-    const currentPath = window.location.pathname.split("/").pop();
-    links.forEach(link => {
-        const linkPath = link.getAttribute('href');
-        if (linkPath === currentPath || (linkPath === 'index.html' && currentPath === '')) {
-            link.classList.add('active');
-        }
-    });
+    const phoneParts = ['727', '505', '0626'].join('-');
+    $('#phone').text(phoneParts);
 
-    // Display obfuscated phone number
-    const phone = ['727', '505', '0626'].join('-');
-    const phoneElement = document.getElementById('phone');
-    if (phoneElement) {
-        phoneElement.textContent = phone;
+
+    // Dark/Light Mode Toggle (simplified - auto)
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark) {
+        document.body.classList.remove('light-mode');
+        document.body.classList.add('dark-mode');
+    } else {
+         document.body.classList.remove('dark-mode');
+        document.body.classList.add('light-mode');
     }
 });
