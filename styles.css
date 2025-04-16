@@ -61,7 +61,8 @@ ul {
     margin-bottom: 1rem;
 }
 
-ul li::before{
+/* Corrected rule:  Only apply to direct children of elements that are NOT item-highlights */
+ul:not(.item-highlights) > li::before {
     content: '•';
     color: #3498db;
     margin-right: 10px;
@@ -271,6 +272,7 @@ ul li::before{
 
 .item-highlights li{
     margin-bottom: 0.75rem;
+    font-size: 1.1rem;
 }
 
 
@@ -412,7 +414,7 @@ ul li::before{
 
 /* Footer Styles */
 .main-footer {
-    background-color: #2c3e50;
+    background-color: #34495e; /* Slightly lighter footer background */
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -570,4 +572,3 @@ ul li::before{
     margin-bottom: 0.75rem;
     font-size: 1.1rem;
 }
-
