@@ -9,21 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../scripts.js"></script>
 </head>
 <body>
     <div class="container">
         <header class="main-header">
             <nav class="main-nav">
                 <a href="../index.html" class="nav-brand">Joshua Adams</a>
-                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">☰</button>
+                 <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">☰</button>
                 <div class="nav-links-container" id="nav-links-container">
                     <ul class="nav-links" id="nav-links">
                         <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="../business-continuity.html" class="nav-link">Business Continuity</a></li>
                         <li class="nav-item"><a href="../research.html" class="nav-link">Research</a></li>
                         <li class="nav-item"><a href="../teaching.html" class="nav-link active">Teaching</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Resume</a></li>
-                        <li class="nav-item"><a href="../adamsjapanese.html" class="nav-link">日本語</a></li>
+                        <li class="nav-item"><a href="../business-continuity.html" class="nav-link">Business Continuity</a></li>
+                         <li class="nav-item"><a href="../projects" class="nav-link">Projects</a></li>
                     </ul>
                 </div>
             </nav>
@@ -34,7 +34,8 @@
                     <p class="hero-title">Certified Business Continuity Professional (CBCP) | IT & Cybersecurity Specialist | Researcher | Educator</p>
                     <ul class="contact-list">
                         <li class="contact-item"><span class="icon">📍</span> Hudson, FL</li>
-                        <li class="contact-item"><span class="icon">📧</span> <a href="mailto:joshadams@protonmail.com">joshadams@protonmail.com</a></li>
+                        <li class="contact-item"><span class="icon">📧</span> <span id="email"></span></li>
+                         <li class="contact-item"><span>📱</span> <span id="phone"></span></li>
                         <li class="contact-item"><span class="icon">🔗</span> <a href="https://www.linkedin.com/in/adamdsit/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                     </ul>
                 </div>
