@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joshua Adams | Research</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
 </head>
-<body>
+<body class="light-mode">
     <div class="container">
         <header class="main-header">
             <nav class="main-nav">
-                <a href="index.html" class="nav-brand">Joshua Adams</a>
+                <a href="/" class="nav-brand">Joshua Adams</a>
                 <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">☰</button>
                 <div class="nav-links-container" id="nav-links-container">
                     <ul class="nav-links" id="nav-links">
-                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="business-continuity.html" class="nav-link">Business Continuity</a></li>
-                        <li class="nav-item"><a href="research.html" class="nav-link active">Research</a></li>
-                        <li class="nav-item"><a href="teaching.html" class="nav-link">Teaching</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Resume</a></li>
-                        <li class="nav-item"><a href="adamsjapanese.html" class="nav-link">日本語</a></li>
+                        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="/research" class="nav-link active">Research</a></li>
+                        <li class="nav-item"><a href="/teaching" class="nav-link">Teaching</a></li>
+                        <li class="nav-item"><a href="/business-continuity" class="nav-link">Business Continuity</a></li>
+                        <li class="nav-item"><a href="/projects" class="nav-link">Projects</a></li>
                     </ul>
                 </div>
             </nav>
@@ -31,13 +31,11 @@
                 <img src="avatar.png" alt="Joshua Adams" class="hero-avatar">
                 <div class="hero-content">
                     <h1>Joshua Adams</h1>
-                    <p class="hero-title">
-                        Certified Business Continuity Professional (CBCP) | IT & Cybersecurity
-                        Specialist | Researcher | Educator
-                    </p>
+                    <p class="hero-title">Certified Business Continuity Professional (CBCP) | IT & Cybersecurity Specialist | Researcher | Educator</p>
                     <ul class="contact-list">
                         <li class="contact-item"><span class="icon">📍</span> Hudson, FL</li>
-                        <li class="contact-item"><span class="icon">📧</span> <a href="mailto:joshadams@protonmail.com">joshadams@protonmail.com</a></li>
+                        <li class="contact-item"><span class="icon">📧</span> <span id="email"></span></li>
+                         <li class="contact-item"><span>📱</span> <span id="phone"></span></li>
                         <li class="contact-item"><span class="icon">🔗</span> <a href="https://www.linkedin.com/in/adamdsit/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                     </ul>
                 </div>
@@ -47,78 +45,96 @@
         <main class="main-content">
             <section class="section research-section" id="research">
                 <h2 class="section-title">Research & Publications</h2>
-                <p>
-                    View full profile on
-                    <a href="https://orcid.org/0000-0002-7185-9125" target="_blank" rel="noopener noreferrer">ORCID</a>
-                    or return to the <a href="index.html" class="nav-link">Home page.</a>
-                </p>
 
-                <div class="filter-controls">
-                    <label for="yearFilter">Filter by year:</label>
-                    <select id="yearFilter">
-                        <option value="all">All</option>
-                        <option value="2024">2024</option>
-                        <option value="2022a">2022</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                        <option value="2018">2018</option>
-                    </select>
-                </div>
+                <h3>Publications</h3>
+                <ul class="publication-list">
+                    <li class="publication-item">
+                        <p>Foster, D., White, L., Adams, J., et al. (2018). Cloud Computing: Developing Contemporary Computer Science Curriculum for a Cloud-First Future. ACM, New York, NY, USA.</p>
+                        <a href="https://doi.org/10.1145/3293881.3295781" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3293881.3295781</a>
+                    </li>
+                    <li class="publication-item">
+                        <p>Foster, D., White, L., Adams, J., et al. (2019). Toward a Cloud Computing Learning Community. ACM, New York, NY, USA.</p>
+                        <a href="https://doi.org/10.1145/3344429.3372506" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3344429.3372506</a>
+                    </li>
+                    <li class="publication-item">
+                        <p>Banisakher, M., Omar, M., Hong, S., & Adams, J. (2020). A Human Centric Approach to Data Fusion in Post-Disaster Management. Journal of Business and Management Sciences, 8(1), 12-20.</p>
+                        <a href="https://doi.org/10.12691/jbms-8-1-3" target="_blank" rel="noopener noreferrer">https://doi.org/10.12691/jbms-8-1-3</a>
+                    </li>
+                    <li class="publication-item">
+                        <p>Adams, J., Hainey, B., et al. (2020). Cloud Computing Curriculum: Developing Exemplar Modules for General Course Inclusion. ACM, New York, NY, USA.</p>
+                        <a href="https://doi.org/10.1145/3341525.3394992" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3341525.3394992</a>
+                    </li>
+                    <li class="publication-item">
+                        <p>Paterson, J., Adams, J., Hainey, B., & Nazir, S. (2021). A Repository of Resources and Exemplars for the Cloud Curriculum. ACM, New York, NY, USA.</p>
+                        <a href="https://doi.org/10.1145/3437914.3437971" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3437914.3437971</a>
+                    </li>
+                     <li class="publication-item">
+                        <p> Paterson, J., Adams, J., White, L., et al. (2021). Planning a Conceptual Framework Approach for Teaching Cloud Fundamentals. In Proceedings of the 26th ACM Conference on Innovation and Technology in Computer Science Education V. 2 (ITICSE '21). ACM, New York, NY, USA.</p>
+                        <a href="https://doi.org/10.1145/3456565.3461443" target="_blank" rel="noopener noreferrer">https://doi.org/10.1145/3456565.3461443</a>
+                    </li>
+                </ul>
 
-                <article class="experience-item">
-                    <h3 class="item-title">Applying Natural Language Processing in Answering Multiple-Choice Questions for Assessing Child/Youth and Adults Needs and Strengths (CANS / C-ANSA)</h3>
-                    <p class="item-subtitle">Adams, J., et al. (2024). <em>Stanford CS224N Custom Project</em></p>
-                    <p class="item-date">ResearchGate: <a href="https://www.researchgate.net/publication/381801109_Applying_Natural_Language_Processing_in_Answering_Multiple-Choice_Questions_for_Assessing_ChildYouth_and_Adults_Needs_and_Strengths_CANS_C_ANSA_Stanford_CS224N_Custom_Project" target="_blank" rel="noopener noreferrer">View Article</a></p>
-                </article>
+                <h3>Conference Participation</h3>
+                <h4>Working Groups</h4>
+                 <ul class="timeline">
+                    <li class="timeline-item">
+                        <p class="item-title">ITiCSE 2021</p>
+                        <p class="item-subtitle">Germany (Online)</p>
+                        <p>Working group leader</p>
+                    </li>
+                    <li class="timeline-item">
+                        <p class="item-title">ITiCSE 2020</p>
+                        <p class="item-subtitle">Norway (Online)</p>
+                        <p>Working group leader</p>
+                    </li>
+                    <li class="timeline-item">
+                         <p class="item-title">ITiCSE 2019</p>
+                        <p class="item-subtitle">Aberdeen, Scotland, U.K.</p>
+                        <p>Working group member</p>
+                    </li>
+                    <li class="timeline-item">
+                        <p class="item-title">ITiCSE 2018</p>
+                        <p class="item-subtitle">Larnaca, Cyprus</p>
+                        <p>Working group leader</p>
+                    </li>
+                </ul>
 
-                <article class="experience-item">
-                    <h3 class="item-title">Motivation and Strategies for Effective Inclusion of Cloud Solution Provider Certifications in Computing Curricula</h3>
-                    <p class="item-subtitle">Paterson, J.H., Adams, J., et al. (2022). <em>Conference Paper</em></p>
-                    <p class="item-date">DOI: <a href="https://doi.org/10.1145/3571785.3574128" target="_blank" rel="noopener noreferrer">10.1145/3571785.3574128</a></p>
-                </article>
-
-                <article class="experience-item">
-                    <h3 class="item-title">Design and Analysis of Visual Question Answering Systems Using Convolutional Neural Networks</h3>
-                    <p class="item-subtitle">Adams, J. (2022). <em>Stanford CS231n Final Report</em></p>
-                    <p class="item-date">PDF: <a href="https://cs231n.stanford.edu/reports/2022/pdfs/31.pdf" target="_blank" rel="noopener noreferrer">Download Report</a></p>
-                </article>
-
-                <article class="experience-item">
-                    <h3 class="item-title">Designing Dissemination and Validation of a Framework for Teaching Cloud Fundamentals</h3>
-                    <p class="item-subtitle">Paterson, J., Adams, J., et al. (2021). <em>Innovation and Technology in CS Education</em></p>
-                    <p class="item-date">DOI: <a href="https://doi.org/10.1145/3502870.3506569" target="_blank" rel="noopener noreferrer">10.1145/3502870.3506569</a></p>
-                </article>
-
-                <article class="experience-item">
-                    <h3 class="item-title">Planning a Conceptual Framework Approach for Teaching Cloud Fundamentals</h3>
-                    <p class="item-subtitle">Paterson, J., Adams, J., et al. (2021). <em>ITiCSE V.2</em></p>
-                    <p class="item-date">DOI: <a href="https://doi.org/10.1145/3456565.3461443" target="_blank" rel="noopener noreferrer">10.1145/3456565.3461443</a></p>
-                </article>
-
-                <article class="experience-item">
-                    <h3 class="item-title">Cloud Computing Curriculum</h3>
-                    <p class="item-subtitle">Adams, J., et al. (2020). <em>Working Group Reports on ITiCSE</em></p>
-                    <p class="item-date">DOI: <a href="https://doi.org/10.1145/3437800.3439206" target="_blank" rel="noopener noreferrer">10.1145/3437800.3439206</a></p>
-                </article>
-
-                <article class="experience-item">
-                    <h3 class="item-title">Cloud Computing Curriculum: Developing Exemplar Modules for General Course Inclusion</h3>
-                    <p class="item-subtitle">Adams, J., et al. (2020). <em>ITiCSE 2020</em></p>
-                    <p class="item-date">DOI: <a href="https://doi.org/10.1145/3341525.3394992" target="_blank" rel="noopener noreferrer">10.1145/3341525.3394992</a></p>
-                </article>
-
-                <article class="experience-item">
-                    <h3 class="item-title">Cloud Computing: Developing Contemporary Computer Science Curriculum for a Cloud-First Future</h3>
-                    <p class="item-subtitle">Foster, D., White, L., Adams, J., et al. (2018). <em>ITiCSE</em></p>
-                    <p class="item-date">DOI: <a href="https://doi.org/10.1145/3197091.3205843" target="_blank" rel="noopener noreferrer">10.1145/3197091.3205843</a></p>
-                </article>
-
-                <article class="experience-item">
-                    <h3 class="item-title">Cloud Computing: Developing Contemporary Computer Science Curriculum for a Cloud-First Future (Companion)</h3>
-                    <p class="item-subtitle">Foster, D., White, L., Adams, J., et al. (2018). <em>Companion Proceedings of ITiCSE</em></p>
-                    <p class="item-date">DOI: <a href="https://doi.org/10.1145/3293881.3295781" target="_blank" rel="noopener noreferrer">10.1145/3293881.3295781</a></p>
-                </article>
+                <h4>Contributed Presentations and Session Panels</h4>
+                <ul class="timeline">
+                    <li class="timeline-item">
+                        <p>Cengage Learning Computing Conference, Computing Seminars | Sessions, April 2021</p>
+                    </li>
+                    <li class="timeline-item">
+                        <p>Google Faculty Institute Conference, April 2021</p>
+                    </li>
+                    <li class="timeline-item">
+                        <p>Google Faculty Institute Conference, September 2020</p>
+                    </li>
+                    <li class="timeline-item">
+                         <p>Google Faculty Institute Conference, June 2018</p>
+                    </li>
+                    <li class="timeline-item">
+                         <p>Cengage Learning Computing Conference, Computing Seminars | Sessions, April 2018</p>
+                    </li>
+                    <li class="timeline-item">
+                         <p>ThelIER, Osaka, Japan, December 2018</p>
+                    </li>
+                    <li class="timeline-item">
+                         <p>Google Educate Conference, June 2017</p>
+                    </li>
+                     <li class="timeline-item">
+                         <p>Cengage Learning Computing Conference, Computing Seminars | Sessions, April 2016/2017</p>
+                    </li>
+                    <li class="timeline-item">
+                         <p>hackmiami, Miami, FL, May 2016</p>
+                    </li>
+                    <li class="timeline-item">
+                         <p>BSides Tampa - Year III, Tampa, FL, April 2016</p>
+                    </li>
+                     <li class="timeline-item">
+                         <p>Cyber-Security- IIIS 2016, Orlando, FL, March & July 2016</p>
+                    </li>
+                </ul>
             </section>
         </main>
 
@@ -129,21 +145,39 @@
         </footer>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const filter = document.getElementById("yearFilter");
-            filter.addEventListener("change", () => {
-                const year = filter.value;
-                document.querySelectorAll(".experience-item").forEach(item => {
-                    const text = item.querySelector(".item-date").textContent;
-                    if (year === "all" || text.includes(year)) {
-                        item.style.display = "";
-                    } else {
-                        item.style.display = "none";
-                    }
-                });
+        $(document).ready(function() {
+            // Mobile menu toggle functionality
+            $('#hamburger-btn').click(function() {
+                $('#nav-links-container').toggleClass('show');
             });
+
+            // Close menu when a link is clicked (optional)
+            $('#nav-links .nav-link').click(function() {
+                if ($('#nav-links-container').hasClass('show')) {
+                    $('#nav-links-container').removeClass('show');
+                }
+            });
+
+            // Obfuscate email and phone number
+            const emailParts = ["joshadams", "protonmail", "com"];
+            const obfuscatedEmail = emailParts.join('@');
+            $('#email').text(obfuscatedEmail);
+            $('#email').attr('href', 'mailto:' + obfuscatedEmail);
+
+            const phoneParts = ['727', '505', '0626'].join('-');
+            $('#phone').text(phoneParts);
+
+
+            // Dark/Light Mode Toggle (simplified - auto)
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (prefersDark) {
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+            } else {
+                 document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+            }
         });
     </script>
-    <script src="scripts.js"></script>
 </body>
 </html>
