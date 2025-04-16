@@ -1,95 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cybersecurity Fundamentals – Syllabus</title>
-  <link rel="stylesheet" href="../styles.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Fundamentals – Syllabus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <div class="container">
-    <nav class="navbar">
-      <a href="../index.html" class="nav-brand">Joshua Adams</a>
-      <div class="nav-links">
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="../business-continuity.html" class="nav-link">Business Continuity</a>
-        <a href="../research.html" class="nav-link">Research</a>
-        <a href="../teaching.html" class="nav-link active">Teaching</a>
-        <a href="#" class="nav-link">Resume</a>
-      </div>
-    </nav>
+    <div class="container">
+        <header class="main-header">
+            <nav class="main-nav">
+                <a href="../index.html" class="nav-brand">Joshua Adams</a>
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">☰</button>
+                <div class="nav-links-container" id="nav-links-container">
+                    <ul class="nav-links" id="nav-links">
+                        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="../business-continuity.html" class="nav-link">Business Continuity</a></li>
+                        <li class="nav-item"><a href="../research.html" class="nav-link">Research</a></li>
+                        <li class="nav-item"><a href="../teaching.html" class="nav-link active">Teaching</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Resume</a></li>
+                        <li class="nav-item"><a href="../adamsjapanese.html" class="nav-link">日本語</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="hero">
+                <img src="../avatar.png" alt="Joshua Adams" class="hero-avatar">
+                <div class="hero-content">
+                    <h1>Joshua Adams</h1>
+                    <p class="hero-title">Certified Business Continuity Professional (CBCP) | IT & Cybersecurity Specialist | Researcher | Educator</p>
+                    <ul class="contact-list">
+                        <li class="contact-item"><span class="icon">📍</span> Hudson, FL</li>
+                        <li class="contact-item"><span class="icon">📧</span> <a href="mailto:joshadams@protonmail.com">joshadams@protonmail.com</a></li>
+                        <li class="contact-item"><span class="icon">🔗</span> <a href="https://www.linkedin.com/in/adamdsit/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
 
-    <header>
-      <h1>Joshua Adams</h1>
-      <p class="title">Certified Business Continuity Professional (CBCP) | IT & Cybersecurity Specialist | Researcher | Educator</p>
+        <main class="main-content">
+            <section class="section syllabus-section" id="syllabus">
+                <h2 class="section-title">Cybersecurity Fundamentals – Syllabus</h2>
 
-      <div class="contact-info">
-        <div class="contact-item">
-          <span>📍</span>
-          <span>Hudson, FL</span>
-        </div>
-        <div class="contact-item">
-          <span>📧</span>
-          <a href="mailto:joshadams@protonmail.com">joshadams@protonmail.com</a>
-        </div>
-        <div class="contact-item">
-          <span>📱</span>
-          <span id="phone"></span>
-        </div>
-        <div class="contact-item">
-          <span>🔗</span>
-          <a href="https://www.linkedin.com/in/adamdsit/" target="_blank">LinkedIn</a>
-        </div>
-      </div>
-    </header>
+                <div class="course-info">
+                    <p><strong>Instructor:</strong> Dr. Joshua Adams</p>
+                    <p><strong>Term:</strong> Fall 2025</p>
+                </div>
 
-    <section class="section">
-      <h2 class="section-title">Cybersecurity Fundamentals – Syllabus</h2>
+                <div class="section summary">
+                    <h3 class="item-title">Course Description</h3>
+                    <p>This course introduces core cybersecurity principles, emphasizing hands-on, project-based learning using cloud operations.  Topics include the CIA triad, threat modeling, risk management, cryptography, ethical hacking, and cyber law. Students will apply these concepts in real-world scenarios, utilizing cloud-based tools and platforms to design, implement, and defend secure systems.</p>
+                </div>
 
-      <p><strong>Instructor:</strong> Dr. Joshua Adams</p>
-      <p><strong>Term:</strong> Fall 2025</p>
+                <div class="section objectives">
+                    <h3 class="item-title">Learning Objectives</h3>
+                    <ul class="item-highlights">
+                        <li>Analyze threats and vulnerabilities in cloud-based environments and across network layers.</li>
+                        <li>Apply cryptographic principles to secure communications and data within cloud infrastructures.</li>
+                        <li>Utilize cloud-based security tools and frameworks (e.g., AWS Security Hub, Azure Security Center) in guided labs.</li>
+                        <li>Design and assess risk mitigation strategies for cloud deployments, considering scalability and cost.</li>
+                        <li>Implement and evaluate security best practices in a simulated cloud environment.</li>
+                        <li>Conduct ethical hacking exercises in a controlled cloud setting to identify vulnerabilities.</li>
+                        <li>Understand and apply cyber law and compliance regulations relevant to cloud operations.</li>
+                    </ul>
+                </div>
 
-      <div class="summary">
-        <h3 class="section-title">Course Description</h3>
-        <p>Introduction to core cybersecurity principles including the CIA triad, threat modeling, risk management, cryptography, ethical hacking, and cyber law. Includes hands-on lab work using tools such as Wireshark, Kali Linux, and simulated attack/defense scenarios.</p>
-      </div>
+                <div class="section assessment">
+                    <h3 class="item-title">Assessment & Grading</h3>
+                    <ul class="item-highlights">
+                        <li>Cloud Security Labs & Practical Reports – 30%</li>
+                        <li>Midterm Exam – 25%</li>
+                        <li>Final Cloud Security Capstone Project – 30%</li>
+                        <li>Participation & Discussions – 15%</li>
+                    </ul>
+                </div>
 
-      <div class="summary">
-        <h3 class="section-title">Learning Objectives</h3>
-        <ul class="highlights">
-          <li>Analyze threats and vulnerabilities across network layers</li>
-          <li>Apply cryptographic principles to secure communications</li>
-          <li>Utilize security tools and frameworks in guided labs</li>
-          <li>Design and assess risk mitigation strategies</li>
-        </ul>
-      </div>
+                <div class="section projects">
+                    <h3 class="item-title">Course Projects</h3>
+                    <p>This course includes a significant project component focused on real-world cloud security challenges.  Students will work individually or in small groups to complete the following:</p>
+                    <ul class="item-highlights">
+                        <li><strong>Cloud Infrastructure Security Design:</strong> Design a secure cloud infrastructure for a simulated organization, including network architecture, access controls, and data protection mechanisms.</li>
+                        <li><strong>Cloud Vulnerability Assessment and Penetration Testing:</strong> Perform a vulnerability assessment and penetration test on a deployed cloud application, documenting findings and recommending remediation strategies.</li>
+                        <li><strong>Incident Response in the Cloud:</strong> Develop an incident response plan for a cloud-based security breach, including steps for detection, containment, eradication, recovery, and post-incident analysis.</li>
+                        <li><strong>Secure Cloud Deployment and Automation:</strong> Automate the deployment of a secure cloud environment using Infrastructure as Code (IaC) and implement security best practices.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
 
-      <div class="summary">
-        <h3 class="section-title">Assessment & Grading</h3>
-        <ul class="highlights">
-          <li>Labs & Practical Reports – 30%</li>
-          <li>Midterm Exam – 25%</li>
-          <li>Final Capstone Project – 25%</li>
-          <li>Participation & Discussions – 20%</li>
-        </ul>
-      </div>
-    </section>
-
-    <footer>
-      <p>© 2025 Joshua Adams. All rights reserved.</p>
-      <p><a href="https://github.com/adamsdsit/resume" target="_blank" style="color: var(--accent-color)">View Source on GitHub</a></p>
-      <p><a href="https://www.resilientconsultingsolutions.com/" target="_blank" style="color: var(--accent-color)">Visit Resilient Consulting Solutions</a></p>
-      <p><a href="../teaching.html">← Back to Teaching Page</a></p>
-    </footer>
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const phone = ['727', '505', '0626'].join('-');
-      const phoneElement = document.getElementById('phone');
-      if (phoneElement) phoneElement.textContent = phone;
-    });
-  </script>
+        <footer class="main-footer">
+            <p>© 2025 Joshua Adams. All rights reserved.</p>
+            <p><a href="https://github.com/adamsdsit/resume" target="_blank" rel="noopener noreferrer">View Source on GitHub</a></p>
+            <p><a href="https://www.resilientconsultingsolutions.com/" target="_blank" rel="noopener noreferrer">Visit Resilient Consulting Solutions</a></p>
+            <p><a href="../teaching.html">← Back to Teaching Page</a></p>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const phone = ['727', '505', '0626'].join('-');
+            const phoneElement = document.getElementById('phone');
+            if (phoneElement) phoneElement.textContent = phone;
+        });
+    </script>
+    <script src="../scripts.js"></script>
 </body>
 </html>
