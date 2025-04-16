@@ -572,13 +572,3 @@ ul:not(.item-highlights) > li::before {
     margin-bottom: 0.75rem;
     font-size: 1.1rem;
 }
-.awards-list {
-    margin-top: 1rem;
-    list-style: disc;
-    padding-left: 20px;
-}
-
-.awards-list li{
-    margin-bottom: 0.75rem;
-    font-size: 1.1rem;
-}
