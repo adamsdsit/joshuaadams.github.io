@@ -1,26 +1,51 @@
 {
-  "title": "Joshua Adams",
-  "description": "Certified Business Continuity Professional",
-  "contact": {
-    "email": "joshadams@protonmail.com",
-    "linkedin": "https://www.linkedin.com/in/adamdsit/"
+  "site": {
+    "title": "Joshua Adams",
+    "description": "Certified Business Continuity Professional (CBCP) | IT & Cybersecurity Specialist | Researcher | Educator",
+    "contact": {
+      "location": "Hudson, FL",
+      "email": "joshadams@protonmail.com",
+      "phone": "727-505-0626",
+      "linkedin": "https://www.linkedin.com/in/adamdsit/"
+    },
+    "nav": [
+      { "name": "Home",                   "url": "index.html" },
+      { "name": "Research",               "url": "research.html" },
+      { "name": "Teaching",               "url": "teaching.html" },
+      { "name": "Business Continuity",    "url": "business-continuity.html" },
+      { "name": "Projects",               "url": "projects.html" },
+      { "name": "Hobbies",                "url": "hobbies.html" },
+      { "name": "日本語",                  "url": "home-ja.html" }
+    ]
   },
-  "nav": [
-    { "name": "Home",                  "url": "index.html" },
-    { "name": "Business Continuity",   "url": "business-continuity.html" },
-    { "name": "Research",              "url": "research.html" },
-    { "name": "Teaching",              "url": "teaching.html" },
-    { "name": "Projects",              "url": "projects.html" },
-    { "name": "Hobbies",               "url": "hobbies.html" },
-    { "name": "日本語",                 "url": "home-ja.html" }
-  ],
-  "pages": [
-    { "template": "home.html",                  "output": "index.html" },
-    { "template": "business-continuity.html",   "output": "business-continuity.html" },
-    { "template": "research.html",              "output": "research.html" },
-    { "template": "teaching.html",              "output": "teaching.html" },
-    { "template": "projects.html",              "output": "projects.html" },
-    { "template": "hobbies.html",               "output": "hobbies.html" },
-    { "template": "home-ja.html",                "output": "home-ja.html" }
-  ]
+  "pages": {
+    "home": {
+      "template": "home.html",
+      "output":   "index.html"
+    },
+    "research": {
+      "template": "research.html",
+      "output":   "research.html"
+    },
+    "teaching": {
+      "template": "teaching.html",
+      "output":   "teaching.html"
+    },
+    "business_continuity": {
+      "template": "business-continuity.html",
+      "output":   "business-continuity.html"
+    },
+    "projects": {
+      "template": "projects.html",
+      "output":   "projects.html"
+    },
+    "hobbies": {
+      "template": "hobbies.html",
+      "output":   "hobbies.html"
+    },
+    "home_ja": {
+      "template": "home-ja.html",
+      "output":   "home-ja.html"
+    }
+  }
 }
