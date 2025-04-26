@@ -52,3 +52,10 @@ for fn in STATIC_FILES:
 for fname in ('styles.css','scripts.js','avatar.png'):
     shutil.copyfile(fname, os.path.join('docs', fname))
     print(f"Copied {fname} → docs/{fname}")
+
+# …after generating all your HTML…
+for fn in ('styles.css','scripts.js','avatar.png'):
+    src = os.path.join(BASE_DIR, fn)
+    dst = os.path.join(OUTPUT_DIR, fn)
+    shutil.copyfile(src, dst)
+    print(f"Copied {fn} → docs/{fn}")
