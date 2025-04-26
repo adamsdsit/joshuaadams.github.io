@@ -1,29 +1,26 @@
 {
-  "site": {
-    "title": "Joshua Adams",
-    "description": "Certified Business Continuity Professional (CBCP) | IT & Cybersecurity Specialist | Researcher | Educator",
-    "nav": [
-      { "name": "Home", "url": "index.html" },
-      { "name": "Research", "url": "research.html" },
-      { "name": "Teaching", "url": "teaching.html" },
-      { "name": "Business Continuity", "url": "business-continuity.html" },
-      { "name": "Projects", "url": "projects.html" },
-      { "name": "Hobbies", "url": "hobbies.html" }
-    ],
-    "contact": {
-      "location": "Hudson, FL",
-      "email": "joshadams@protonmail.com",
-      "phone": "727-505-0626",
-      "linkedin": "https://www.linkedin.com/in/adamdsit/"
-    }
+  "title": "Joshua Adams",
+  "description": "Certified Business Continuity Professional",
+  "contact": {
+    "email": "joshadams@protonmail.com",
+    "linkedin": "https://www.linkedin.com/in/adamdsit/"
   },
-  "pages": {
-    "home":               { "output": "index.html",                "template": "home.html" },
-    "research":           { "output": "research.html",             "template": "research.html" },
-    "teaching":           { "output": "teaching.html",             "template": "teaching.html" },
-    "business-continuity":{ "output": "business-continuity.html",  "template": "business-continuity.html" },
-    "projects":           { "output": "projects.html",             "template": "projects.html" },
-    "hobbies":            { "output": "hobbies.html",              "template": "hobbies.html" },
-    "home-ja":            { "output": "adamsjapanese.html",        "template": "home-ja.html" }
-  }
+  "nav": [
+    { "name": "Home",                  "url": "index.html" },
+    { "name": "Business Continuity",   "url": "business-continuity.html" },
+    { "name": "Research",              "url": "research.html" },
+    { "name": "Teaching",              "url": "teaching.html" },
+    { "name": "Projects",              "url": "projects.html" },
+    { "name": "Hobbies",               "url": "hobbies.html" },
+    { "name": "日本語",                 "url": "home-ja.html" }
+  ],
+  "pages": [
+    { "template": "home.html",                  "output": "index.html" },
+    { "template": "business-continuity.html",   "output": "business-continuity.html" },
+    { "template": "research.html",              "output": "research.html" },
+    { "template": "teaching.html",              "output": "teaching.html" },
+    { "template": "projects.html",              "output": "projects.html" },
+    { "template": "hobbies.html",               "output": "hobbies.html" },
+    { "template": "home-ja.html",                "output": "home-ja.html" }
+  ]
 }
