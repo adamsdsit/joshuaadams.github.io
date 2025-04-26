@@ -1,24 +1,31 @@
 :root {
-  /* Colors */
-  --color-bg:       #f9fafe;
-  --color-fg:       #1e1e2d;
-  --color-accent:   #4f46e5;  /* indigo-600 */
-  --color-muted:    #6b7280;  /* gray-500 */
-  --color-card-bg:  #ffffff;
-  --color-shadow:   rgba(0, 0, 0, 0.05);
+  /* … your existing vars … */
 
-  /* Spacing */
-  --spacing-unit:   1rem;
-  --radius:         0.5rem;
-
-  /* Typography */
-  --font-sans:      'Inter', sans-serif;
-  --font-heading:   'Inter', sans-serif;
-  --font-size-base: 1rem;
-  --line-height:    1.6;
+  /* Layout */
+  --max-width: 1200px;   /* you can tweak this to taste */
 
   /* Breakpoints */
-  --bp-md:          768px;
+  --bp-md: 768px;
+}
+
+/* ———————————————————————————————— */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing-unit);
+}
+
+/* wrap all of your sections in a vertical stack with some gap */
+.site-content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit) * 2);
+}
+
+/* center all your <h2> section titles */
+.section > h2 {
+  text-align: center;
 }
   
   * { box-sizing: border-box; margin: 0; padding: 0; }
