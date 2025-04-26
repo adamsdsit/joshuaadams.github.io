@@ -1,0 +1,10 @@
+<nav class="navbar">
+    <a href="index.html" class="nav-brand">{{ site.title }}</a>
+    <div class="nav-links">
+      {% for item in site.nav %}
+        <a href="{{ item.url }}" class="nav-link{% if item.url == page.output %} active{% endif %}">
+          {{ item.name }}
+        </a>
+      {% endfor %}
+    </div>
+  </nav>
