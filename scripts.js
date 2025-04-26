@@ -31,3 +31,10 @@ $(document).ready(function() {
         document.body.classList.add('light-mode');
     }
 });
+const btn = document.getElementById('theme-toggle');
+btn.addEventListener('click', () => {
+  const t = document.documentElement.getAttribute('data-theme') === 'dark'
+    ? 'light'
+    : 'dark';
+  document.documentElement.setAttribute('data-theme', t);
+});

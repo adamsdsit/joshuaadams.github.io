@@ -5,6 +5,8 @@
         <a href="{{ item.url }}" class="nav-link{% if item.url == page.output %} active{% endif %}">
           {{ item.name }}
         </a>
+        <!-- in partials/nav.html, after your links: -->
+<button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
       {% endfor %}
     </div>
   </nav>
