@@ -7,33 +7,49 @@
   --color-card-bg:  #ffffff;
   --color-shadow:   rgba(0, 0, 0, 0.05);
 
-  /* Spacing */
+  /* Spacing & Layout */
   --spacing-unit:   1rem;
   --radius:         0.5rem;
+  --max-width:      1200px;
 
   /* Typography */
   --font-sans:      'Inter', sans-serif;
-  --font-heading:   'Inter', sans-serif;
-  --font-size-base: 1rem;
   --line-height:    1.6;
-
-  /* Layout */
-  --max-width:      1200px;
 
   /* Breakpoints */
   --bp-md:          768px;
 }
 
-/* Reset + box-sizing */
-* {
+/* ———————————————————————————————————————————————————————————————————————————————— */
+/* RESET & BASE */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Page wrapper — applied in base.html as 
-     <main class="site-content container">…</main>
-*/
+body {
+  font-family: var(--font-sans);
+  color: var(--color-fg);
+  background: var(--color-bg);
+  line-height: var(--line-height);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ———————————————————————————————————————————————————————————————————————————————— */
+/* SITE WRAPPERS */
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -46,20 +62,15 @@
   gap: calc(var(--spacing-unit) * 2);
 }
 
-/* Center every section heading */
-.section > h2 {
-  text-align: center;
+/* if you have an extra wrapper for your partials */
+.main-content {
+  width: 100%;
+  margin: 0 auto;
 }
 
-/* Base typography */
-body {
-  font-family: var(--font-sans);
-  color: var(--color-fg);
-  background: var(--color-bg);
-  line-height: var(--line-height);
-}
+/* ———————————————————————————————————————————————————————————————————————————————— */
+/* SITE HEADER & NAV */
 
-/* NAVBAR */
 .site-header {
   background: var(--color-card-bg);
   position: sticky;
@@ -75,35 +86,46 @@ body {
   padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
 }
 
-.nav-links a {
-  margin-left: var(--spacing-unit);
-  color: var(--color-fg);
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-  padding: 0.5rem 0;
+.nav-brand {
+  font-weight: 600;
 }
-.nav-links a::after {
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-unit);
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem;
+  font-weight: 500;
+  color: var(--color-fg);
+}
+
+.nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0; left: 0;
-  height: 2px;
-  width: 0%;
+  left: 0; bottom: 0;
+  width: 0; height: 2px;
   background: var(--color-accent);
   transition: width 0.3s ease;
 }
-.nav-links a:hover::after,
-.nav-links a.active::after {
+
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
 }
 
+/* ———————————————————————————————————————————————————————————————————————————————— */
 /* HERO */
+
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: calc(var(--spacing-unit)*3) var(--spacing-unit);
+  padding: calc(var(--spacing-unit) * 3) var(--spacing-unit);
   background: linear-gradient(135deg, #eef2ff, #ffffff);
 }
 
@@ -115,38 +137,42 @@ body {
 }
 
 .hero-subtitle {
-  color: var(--color-muted);
   margin-top: var(--spacing-unit);
+  color: var(--color-muted);
   font-size: 1.125rem;
 }
 
+/* ———————————————————————————————————————————————————————————————————————————————— */
 /* SECTIONS & CARDS */
+
 .section {
-  margin-top: calc(var(--spacing-unit) * 2);
+  /* spacing is handled by .site-content gap */
 }
 
 .section > h2 {
+  text-align: center;
   margin-bottom: var(--spacing-unit);
   border-bottom: 2px solid var(--color-muted);
   display: inline-block;
 }
 
-/* Card wrapper — must wrap each section’s inner content */
+/* Wrap each section’s content in a .card */
 .card {
   background: var(--color-card-bg);
   padding: calc(var(--spacing-unit) * 2);
-  margin-bottom: calc(var(--spacing-unit) * 2);
+  margin: 0 auto;               /* center within container */
   border-radius: var(--radius);
   box-shadow: 0 2px 6px var(--color-shadow);
+  width: 100%;
 }
 
 @media (min-width: var(--bp-md)) {
   .card {
-    padding: calc(var(--spacing-unit)*3);
+    padding: calc(var(--spacing-unit) * 3);
   }
 }
 
-/* Small “cards” you already have */
+/* Smaller “items” can still keep their own bg+padding */
 .experience-item,
 .education-item,
 .certification-list li,
@@ -154,37 +180,45 @@ body {
   background: #fafafa;
   padding: var(--spacing-unit);
   border-radius: var(--radius);
-  box-shadow: var(--color-shadow);
+  box-shadow: 0 1px 3px var(--color-shadow);
   margin-bottom: var(--spacing-unit);
 }
 
+/* ———————————————————————————————————————————————————————————————————————————————— */
 /* GRID LAYOUTS */
+
 .expertise-grid,
 .skills-grid {
   display: grid;
   grid-gap: var(--spacing-unit);
   margin-top: var(--spacing-unit);
 }
+
 .expertise-grid {
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
+
 .skills-grid {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
+/* ———————————————————————————————————————————————————————————————————————————————— */
 /* FOOTER */
-footer.footer {
+
+.footer {
   text-align: center;
   padding: var(--spacing-unit) 0;
   color: var(--color-muted);
   font-size: 0.9rem;
 }
 
+/* ———————————————————————————————————————————————————————————————————————————————— */
 /* DARK MODE OVERRIDES */
+
 [data-theme="dark"] {
-  --color-bg:       #1e1e2d;
-  --color-fg:       #e5e7eb;
-  --color-muted:    #9ca3af;
-  --color-card-bg:  #2a2a3d;
-  --color-shadow:   rgba(0,0,0,0.3);
+  --color-bg:      #1e1e2d;
+  --color-fg:      #e5e7eb;
+  --color-muted:   #9ca3af;
+  --color-card-bg: #2a2a3d;
+  --color-shadow:  rgba(0, 0, 0, 0.3);
 }
