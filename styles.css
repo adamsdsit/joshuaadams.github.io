@@ -1,29 +1,28 @@
 :root {
-  /* … your existing vars … */
+  /* existing vars… */
 
   /* Layout */
-  --max-width: 1200px;   /* you can tweak this to taste */
+  --max-width: 1200px;
 
   /* Breakpoints */
   --bp-md: 768px;
 }
 
-/* ———————————————————————————————— */
-
+/* container sizing */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: var(--spacing-unit);
 }
 
-/* wrap all of your sections in a vertical stack with some gap */
+/* stack all sections with consistent gaps */
 .site-content {
   display: flex;
   flex-direction: column;
   gap: calc(var(--spacing-unit) * 2);
 }
 
-/* center all your <h2> section titles */
+/* center all your section headings */
 .section > h2 {
   text-align: center;
 }
