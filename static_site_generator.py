@@ -1,4 +1,4 @@
-import json
+import json, jinja2, os
 import os
 from jinja2 import Environment, FileSystemLoader
 
@@ -10,7 +10,7 @@ with open('content/site_data.json', encoding='utf-8') as f:
 env = Environment(loader=FileSystemLoader('templates'), autoescape=True)
 
 # Ensure output directory exists
-ios.makedirs('docs', exist_ok=True)
+os.makedirs('docs', exist_ok=True)
 
 # Render each page defined in the JSON
 for page in data['pages']:
