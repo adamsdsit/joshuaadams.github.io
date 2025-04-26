@@ -24,17 +24,15 @@
   --bp-md:          768px;
 }
 
-/* ———————————————————————————————— */
-
-/* reset + box-sizing */
+/* Reset + box-sizing */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* the wrapper you must apply in base.html:
-     <main class="site-content container"> … </main>
+/* Page wrapper — applied in base.html as 
+     <main class="site-content container">…</main>
 */
 .container {
   max-width: var(--max-width);
@@ -48,13 +46,12 @@
   gap: calc(var(--spacing-unit) * 2);
 }
 
-/* center every <h2> inside a .section */
+/* Center every section heading */
 .section > h2 {
   text-align: center;
 }
 
-/* ———————————————————————————————— */
-
+/* Base typography */
 body {
   font-family: var(--font-sans);
   color: var(--color-fg);
@@ -62,7 +59,7 @@ body {
   line-height: var(--line-height);
 }
 
-/* NAV */
+/* NAVBAR */
 .site-header {
   background: var(--color-card-bg);
   position: sticky;
@@ -86,18 +83,15 @@ body {
   position: relative;
   padding: 0.5rem 0;
 }
-
 .nav-links a::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
+  bottom: 0; left: 0;
   height: 2px;
+  width: 0%;
   background: var(--color-accent);
   transition: width 0.3s ease;
 }
-
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
@@ -109,13 +103,12 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: calc(var(--spacing-unit) * 3) var(--spacing-unit);
+  padding: calc(var(--spacing-unit)*3) var(--spacing-unit);
   background: linear-gradient(135deg, #eef2ff, #ffffff);
 }
 
 .hero-avatar {
-  width: 120px;
-  height: 120px;
+  width: 120px; height: 120px;
   border-radius: 50%;
   box-shadow: 0 4px 8px var(--color-shadow);
   margin-bottom: var(--spacing-unit);
@@ -123,7 +116,7 @@ body {
 
 .hero-subtitle {
   color: var(--color-muted);
-  margin: var(--spacing-unit) 0 0;
+  margin-top: var(--spacing-unit);
   font-size: 1.125rem;
 }
 
@@ -138,7 +131,7 @@ body {
   display: inline-block;
 }
 
-/* wrap the inner of each section in <div class="card">… */
+/* Card wrapper — must wrap each section’s inner content */
 .card {
   background: var(--color-card-bg);
   padding: calc(var(--spacing-unit) * 2);
@@ -149,11 +142,11 @@ body {
 
 @media (min-width: var(--bp-md)) {
   .card {
-    padding: calc(var(--spacing-unit) * 3);
+    padding: calc(var(--spacing-unit)*3);
   }
 }
 
-/* your existing “list-card” styles */
+/* Small “cards” you already have */
 .experience-item,
 .education-item,
 .certification-list li,
@@ -172,11 +165,9 @@ body {
   grid-gap: var(--spacing-unit);
   margin-top: var(--spacing-unit);
 }
-
 .expertise-grid {
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
-
 .skills-grid {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
@@ -189,7 +180,7 @@ footer.footer {
   font-size: 0.9rem;
 }
 
-/* DARK MODE */
+/* DARK MODE OVERRIDES */
 [data-theme="dark"] {
   --color-bg:       #1e1e2d;
   --color-fg:       #e5e7eb;
