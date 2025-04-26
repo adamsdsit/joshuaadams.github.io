@@ -1,27 +1,35 @@
-import os, json
-from jinja2 import Environment, FileSystemLoader, select_autoescape
+import json
+import os
+from jinja2 import Environment, FileSystemLoader
 
-CONTENT_DIR  = 'content'
-TEMPLATE_DIR = 'templates'
-OUTPUT_DIR   = 'docs'       # we'll generate to /docs for GitHub Pages
-
-# Load data
-with open(f'{CONTENT_DIR}/site_data.json') as f:
+# Load site configuration
+with open('content/site_data.json', encoding='utf-8') as f:
     data = json.load(f)
 
-# Jinja2 setup
-env = Environment(loader=FileSystemLoader(TEMPLATE_DIR),
-                  autoescape=select_autoescape(['html']))
+# Prepare Jinja2 environment
+env = Environment(loader=FileSystemLoader('templates'), autoescape=True)
 
-def generate(key, spec):
-    tpl = env.get_template('base.html')
-    context = dict(site=data['site'], page=spec)
-    html = tpl.render(**context)
-    out_path = os.path.join(OUTPUT_DIR, spec['output'])
-    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+# Ensure output directory exists
+ios.makedirs('docs', exist_ok=True)
+
+# Render each page defined in the JSON
+for page in data['pages']:
+    output_filename = page['output']
+    template_name = page['template']
+
+    # Build the rendering context
+    context = {
+        'site': data['site'],    # global site settings
+        'page': page             # per-page metadata
+    }
+
+    # Render base template (which includes nav, sections, footer)
+    template = env.get_template('base.html')
+    rendered_html = template.render(**context)
+
+    # Write to the docs/ folder
+    out_path = os.path.join('docs', output_filename)
     with open(out_path, 'w', encoding='utf-8') as f:
-        f.write(html)
+        f.write(rendered_html)
 
-if __name__ == '__main__':
-    for key,spec in data['pages'].items():
-        generate(key, spec)
+print("Site generated successfully! Check the docs/ folder.")
