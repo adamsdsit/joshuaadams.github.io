@@ -48,3 +48,7 @@ for fn in STATIC_FILES:
     dst = os.path.join(OUTPUT_DIR, fn)
     shutil.copy(src, dst)
     print(f"Copied {fn} → docs/{fn}")
+
+for fname in ('styles.css','scripts.js','avatar.png'):
+    shutil.copyfile(fname, os.path.join('docs', fname))
+    print(f"Copied {fname} → docs/{fname}")
