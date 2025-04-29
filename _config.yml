@@ -4,7 +4,7 @@ title: "Joshua Adams"
 email: "joshadams@protonmail.com"
 description: "Certified Business Continuity Professional (CBCP) | IT & Cybersecurity Specialist | Researcher | Educator"
 baseurl: ""        # if publishing to USER.github.io, keep this blank
-url: "https://yourusername.github.io"  # or your custom domain if set up
+url: "https://joshuaadams.dev"  # or your custom domain if set up
 
 theme: minima
 
