@@ -97,6 +97,25 @@ export default function Page(){
             </div>
           </div>
         </Section>
+        <Section title="Education">
+          <article className="card">
+            <div className="flex items-start justify-between gap-2">
+              <div>
+                <h3 className="font-bold">Doctorate in Information Technology</h3>
+                <p className="muted">Walden University</p>
+              </div>
+              <p className="muted">2020</p>
+            </div>
+          </article>
+        </Section>
+        <Section title="Certifications">
+          <ul className="muted grid gap-2 list-none md:grid-cols-2">
+            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
+              <strong>Certified Business Continuity Professional (CBCP)</strong>
+              <span className="block muted">DRI International, 2023</span>
+            </li>
+          </ul>
+        </Section>
         <Section title="Contact" >
           <form className="grid gap-3" method="POST" action="https://formsubmit.co/contact@joshuaadams.dev">
             <label className="grid gap-1">
