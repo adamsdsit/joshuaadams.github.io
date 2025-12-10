@@ -5,80 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joshua Adams | Certified Business Continuity Professional (CBCP) | IT &amp; Cybersecurity Specialist | Researcher | Educator</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="resume.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="light-mode">
+<body class="theme-light">
   <header class="site-header">
-    <nav class="navbar">
-    <a href="index.html" class="nav-brand">Joshua Adams</a>
-    <div class="nav-links">
-      
-        <a href="index.html" class="nav-link active">
-          Home
-        </a>
-        <!-- in partials/nav.html, after your links: -->
-<button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
-      
-        <a href="research.html" class="nav-link">
-          Research
-        </a>
-        <!-- in partials/nav.html, after your links: -->
-<button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
-      
-        <a href="teaching.html" class="nav-link">
-          Teaching
-        </a>
-        <!-- in partials/nav.html, after your links: -->
-<button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
-      
-        <a href="business-continuity.html" class="nav-link">
-          Business Continuity
-        </a>
-        <!-- in partials/nav.html, after your links: -->
-<button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
-      
-        <a href="projects.html" class="nav-link">
-          Projects
-        </a>
-        <!-- in partials/nav.html, after your links: -->
-<button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
-      
-        <a href="hobbies.html" class="nav-link">
-          Hobbies
-        </a>
-        <!-- in partials/nav.html, after your links: -->
-<button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
-      
-        <a href="home-ja.html" class="nav-link">
-          日本語
-        </a>
-        <!-- in partials/nav.html, after your links: -->
-<button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
-      
-    </div>
-  </nav>
-    <div class="hero">
-      <img src="avatar.png" alt="Joshua Adams" class="hero-avatar">
-      <div class="hero-intro">
-        <h1>Joshua Adams</h1>
-        <p class="hero-subtitle">Certified Business Continuity Professional (CBCP) | IT &amp; Cybersecurity Specialist | Researcher | Educator</p>
-        <ul class="contact-list">
-          <li>📍 Hudson, FL</li>
-          <li>📧 <a href="mailto:joshadams@protonmail.com">joshadams@protonmail.com</a></li>
-          <li>📱 727-505-0626</li>
-          <li>🔗 <a href="https://www.linkedin.com/in/adamdsit/" target="_blank">LinkedIn</a></li>
-        </ul>
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Joshua Adams</a>
+      <nav class="nav-links">
+        <a class="nav-link" href="#summary">Summary</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" aria-label="Toggle theme" class="icon-btn">🌓</button>
+        <a class="btn btn-primary" href="#download" id="download-btn">Download CV</a>
       </div>
     </div>
   </header>
 
   <main class="site-content container">
-    <main class="site-content container">
+  <!-- Hero -->
+  <section id="hero" class="section hero-section">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <img src="avatar.png" alt="Joshua Adams" class="avatar">
+      </div>
+      <div class="hero-right">
+        <h1 class="name">Joshua Adams</h1>
+        <p class="role">Certified Business Continuity Professional (CBCP) • IT & Cybersecurity • Researcher • Educator</p>
+        <p class="hero-blurb">Seasoned IT and resilience professional with 20+ years leading technical programs, teaching, and consulting. I design resilient systems, lead cross-functional teams, and translate complex technical needs into strategic outcomes.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn">Contact</a>
+          <a href="#projects" class="btn btn-ghost">Projects</a>
+          <a href="resume.pdf" class="btn btn-primary" id="download-link">Download PDF</a>
+        </div>
+        <ul class="contact-inline">
+          <li>📍 Hudson, FL</li>
+          <li>📧 <a href="mailto:joshadams@protonmail.com">joshadams@protonmail.com</a></li>
+          <li>📱 727-505-0626</li>
+          <li><a href="https://www.linkedin.com/in/adamdsit/" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- Summary -->
-  <section id="summary" class="section summary-section">
+  <section id="summary" class="section summary-section reveal">
     <div class="card">
       <h2>Summary</h2>
       <p>Dynamic and results-driven professional with over 20 years of experience in IT, cybersecurity, and enterprise architecture. Certified Business Continuity Professional (CBCP) with proven expertise in technical project management, stakeholder management, and leading cross-functional teams. Adept at leveraging emerging technologies, data analysis, and developing innovative solutions. Experienced in coding, technical troubleshooting, and AI/machine learning. Passionate about driving strategic growth and improving customer experience.</p>
@@ -86,7 +63,7 @@
   </section>
 
   <!-- Professional Experience -->
-  <section id="experience" class="section experience-section">
+  <section id="experience" class="section experience-section reveal">
     <div class="card">
       <h2>Professional Experience</h2>
       <article class="experience-item">
@@ -168,7 +145,7 @@
   </section>
 
   <!-- Leadership Expertise -->
-  <section id="leadership" class="section leadership-section">
+  <section id="leadership" class="section leadership-section reveal">
     <div class="card">
       <h2>Leadership Expertise</h2>
       <div class="expertise-grid">
@@ -185,26 +162,32 @@
   </section>
 
   <!-- Technical Proficiency -->
-  <section id="skills" class="section skills-section">
+  <section id="skills" class="section skills-section reveal">
     <div class="card">
       <h2>Technical Proficiency</h2>
       <div class="skills-grid">
-        <div class="skill-group">
-          <h3>Domains</h3>
-          <ul class="skill-list">
-            <li>Software Development</li>
-            <li>Systems Engineering</li>
-            <li>Cloud Engineering</li>
-            <!-- …etc… -->
-          </ul>
+        <div class="skill">
+          <strong>Cloud & Infrastructure</strong>
+          <div class="bar"><span data-pct="90%"></span></div>
         </div>
-        <!-- repeat .skill-group for each category -->
+        <div class="skill">
+          <strong>Security & Risk</strong>
+          <div class="bar"><span data-pct="88%"></span></div>
+        </div>
+        <div class="skill">
+          <strong>Architecture & Systems</strong>
+          <div class="bar"><span data-pct="86%"></span></div>
+        </div>
+        <div class="skill">
+          <strong>Teaching & Research</strong>
+          <div class="bar"><span data-pct="92%"></span></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Education -->
-  <section id="education" class="section education-section">
+  <section id="education" class="section education-section reveal">
     <div class="card">
       <h2>Education</h2>
       <article class="education-item">
@@ -219,7 +202,7 @@
   </section>
 
   <!-- Certifications -->
-  <section id="certifications" class="section certifications-section">
+  <section id="certifications" class="section certifications-section reveal">
     <div class="card">
       <h2>Certifications</h2>
       <ul class="certification-list">
@@ -233,13 +216,46 @@
   </section>
 
   <!-- Awards -->
-  <section id="awards" class="section awards-section">
+  <section id="awards" class="section awards-section reveal">
     <div class="card">
       <h2>Awards & Recognition</h2>
       <ul class="awards-list">
         <li>Coast Guard Achievement Medal (Gold Star)</li>
         <!-- …etc… -->
       </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact-section reveal">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, use the form below or email <a href="mailto:contact@joshuaadams.dev">contact@joshuaadams.dev</a>.</p>
+
+      <!--
+        Form integration:
+        - By default this posts to Formsubmit (no account needed): action="https://formsubmit.co/contact@joshuaadams.dev"
+        - To use Formspree replace the action with your Formspree endpoint (e.g. https://formspree.io/f/yourFormId)
+      -->
+      <form id="contact-form" class="contact-form" method="POST" action="https://formsubmit.co/contact@joshuaadams.dev">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+        <input type="hidden" name="_subject" value="Website Contact: Resume Site">
+        <div style="margin-top:.6rem;display:flex;gap:.6rem">
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <button class="btn btn-ghost" type="reset">Reset</button>
+        </div>
+      </form>
     </div>
   </section>
 </main>
@@ -251,6 +267,6 @@
       <a href="https://www.linkedin.com/in/adamdsit/" target="_blank">LinkedIn</a>
     </p>
   </footer>
-  <script src="scripts.js"></script>
+  <script src="resume.js" defer></script>
 </body>
 </html>
