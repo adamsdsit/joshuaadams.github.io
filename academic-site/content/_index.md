@@ -6,7 +6,7 @@ hero:
 	enable: true
 	title: "Joshua Adams"
 	tagline: "Academic Researcher • Educator • CBCP"
-	image: "/img/avatar.png"
+	image: "/img/avatar.svg"
 	links:
 		- label: "ORCID"
 			href: "https://orcid.org/0000-0002-7185-9125"
