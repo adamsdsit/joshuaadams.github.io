@@ -2,12 +2,20 @@ import { NavBar } from '@/components/NavBar';
 import { Footer } from '@/components/Footer';
 import { Section } from '@/components/Section';
 import { experiences } from '@/content/resume';
+import Link from 'next/link';
 
 export default function ExperiencePage() {
   return (
     <>
       <NavBar />
       <main>
+        <div className="container py-6">
+          <nav aria-label="Breadcrumb" className="text-sm flex items-center gap-2">
+            <Link className="text-accent2" href="/">Home</Link>
+            <span className="text-muted">/</span>
+            <span className="text-muted">Experience</span>
+          </nav>
+        </div>
         <Section title="All Experience" description="Complete roles and selected impact highlights.">
           <div className="grid gap-3 md:grid-cols-2">
             {experiences.map((exp) => (
