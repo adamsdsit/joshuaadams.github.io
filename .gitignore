@@ -1,0 +1,6 @@
+# Logs and local artifacts
+*.log
+server_uiux.log
+next-site/.next/
+next-site/node_modules/
+next-site/out/

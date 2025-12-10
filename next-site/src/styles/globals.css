@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 12px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-bg text-text antialiased;
+}
+
+.container {
+  @apply w-[92%] max-w-screen-xl mx-auto py-6;
+}
+
+.card {
+  @apply bg-card/60 backdrop-blur rounded-xl shadow-lg p-5;
+}
+
+.btn {
+  @apply inline-block rounded-lg px-3 py-2 font-semibold border border-white/10 text-text;
+}
+
+.btn-primary {
+  @apply bg-accent text-slate-900 border-0;
+}
+
+.muted { @apply text-muted; }
