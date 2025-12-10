@@ -1,0 +1,39 @@
+baseURL = "https://joshuaadams.dev/"
+languageCode = "en-us"
+title = "Joshua Adams"
+theme = "wowchemy"
+paginate = 10
+
+enableRobotsTXT = true
+canonifyURLs = true
+
+[module]
+  [[module.imports]]
+    path = "github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy"
+
+[params]
+  # Basic profile
+  description = "Academic research, publications, teaching, and CV"
+  email = "contact@joshuaadams.dev"
+  # Social & scholarly IDs
+  orcid = "0000-0000-0000-0000" # placeholder; update
+  google_scholar = "" # placeholder; update
+  linkedin = "https://www.linkedin.com/in/adamdsit/"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+  [languages.ja]
+    languageName = "日本語"
+    weight = 2
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true

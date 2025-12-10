@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://joshuaadams.dev/sitemap.xml
