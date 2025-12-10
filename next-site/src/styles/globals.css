@@ -12,15 +12,20 @@ body {
 }
 
 body {
-  @apply bg-bg text-text antialiased;
+  @apply bg-bg text-text antialiased leading-7;
 }
+
+h1 { @apply text-3xl md:text-4xl font-bold tracking-tight; }
+h2 { @apply text-2xl md:text-3xl font-semibold; }
+h3 { @apply text-xl md:text-2xl font-semibold; }
+p  { @apply text-base; }
 
 .container {
   @apply w-[92%] max-w-screen-xl mx-auto py-6;
 }
 
 .card {
-  @apply bg-card/60 backdrop-blur rounded-xl shadow-lg p-5;
+  @apply bg-surface/60 border border-dark-border/60 backdrop-blur rounded-xl shadow-lg p-5;
 }
 
 .btn {

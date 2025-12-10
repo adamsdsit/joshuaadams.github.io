@@ -6,10 +6,13 @@ export function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section className="container my-4">
+    <section className="container">
       <div className="card">
-        <h2 className="text-xl font-bold">{title}</h2>
-        <div className="mt-3">{children}</div>
+        <div className="mb-2">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">{title}</h2>
+          {description ? <p className="muted mt-1">{description}</p> : null}
+        </div>
+        <div className="grid gap-3">{children}</div>
       </div>
     </section>
   );

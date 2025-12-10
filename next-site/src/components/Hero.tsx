@@ -5,7 +5,7 @@ export function Hero() {
         <div className="w-[140px] h-[140px] rounded-xl bg-slate-700/40 border border-white/10" />
       </div>
       <div>
-        <h1 className="text-3xl font-extrabold tracking-tight">Joshua Adams</h1>
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Joshua Adams</h1>
         <p className="muted font-semibold mt-1">
           Certified Business Continuity Professional (CBCP) • IT & Cybersecurity
           • Researcher • Educator
