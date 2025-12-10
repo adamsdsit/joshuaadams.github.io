@@ -16,8 +16,8 @@ canonifyURLs = true
   description = "Academic research, publications, teaching, and CV"
   email = "contact@joshuaadams.dev"
   # Social & scholarly IDs
-  orcid = "0000-0000-0000-0000" # placeholder; update
-  google_scholar = "" # placeholder; update
+  orcid = "https://orcid.org/0000-0002-7185-9125"
+  google_scholar = "" # add your profile URL
   linkedin = "https://www.linkedin.com/in/adamdsit/"
 
 [outputs]
