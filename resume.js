@@ -70,6 +70,30 @@
     }).catch(()=>{downloadLink.setAttribute('href','#contact');});
   }
 
+  // Contact form UX: try AJAX submit (falls back to native POST if CORS blocks)
+  const contactForm = document.getElementById('contact-form');
+  const contactStatus = document.getElementById('contact-status');
+  if(contactForm){
+    contactForm.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      if(contactStatus) contactStatus.textContent = 'Sending...';
+      const action = contactForm.getAttribute('action') || window.location.href;
+      const formData = new FormData(contactForm);
+
+      try{
+        // Attempt a fetch; use no-cors for Formsubmit to allow the POST
+        await fetch(action, { method: 'POST', body: formData, mode: 'no-cors' });
+        if(contactStatus) contactStatus.textContent = 'Thanks — your message was sent. Please check your email for confirmation.';
+        contactForm.reset();
+      }catch(err){
+        // If fetch fails, fallback to default form submit
+        if(contactStatus) contactStatus.textContent = 'Network error — attempting fallback submit.';
+        contactForm.removeEventListener('submit', arguments.callee);
+        contactForm.submit();
+      }
+    });
+  }
+
   // Accessibility: show focus outline on keyboard navigation
   document.addEventListener('keyup',e=>{
     if(e.key === 'Tab') document.body.classList.add('show-focus');
