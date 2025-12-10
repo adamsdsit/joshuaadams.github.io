@@ -5,21 +5,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Base neutrals
-        light: {
-          bg: '#ffffff',
-          surface: '#f8fafc',
-          text: '#0f172a',
-          muted: '#475569',
-          border: '#e2e8f0',
-        },
-        dark: {
-          bg: '#0b1220',
-          surface: '#111827',
-          text: '#e5e7eb',
-          muted: '#94a3b8',
-          border: '#1f2937',
-        },
+        // Base tokens (light)
+        bg: '#ffffff',
+        surface: '#f8fafc',
+        text: '#0f172a',
+        muted: '#475569',
+        border: '#e2e8f0',
+        // Dark tokens (explicit names for convenience)
+        'dark-bg': '#0b1220',
+        'dark-surface': '#111827',
+        'dark-text': '#e5e7eb',
+        'dark-muted': '#94a3b8',
+        'dark-border': '#1f2937',
         // Accents
         accent: '#22d3ee',
         accent2: '#60a5fa',
