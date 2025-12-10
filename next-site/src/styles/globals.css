@@ -6,7 +6,8 @@
   --radius: 12px;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -30,4 +31,6 @@ body {
   @apply bg-accent text-slate-900 border-0;
 }
 
-.muted { @apply text-muted; }
+.muted {
+  @apply text-muted;
+}
