@@ -1,10 +1,12 @@
 // Resume site interactivity: theme toggle, smooth scroll, skill animations
 (function(){
-  const root = document.documentElement;
+  // Theme handling + nav behaviour + reveal animations + skill bars
   const themeToggle = document.getElementById('theme-toggle');
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
   const downloadLink = document.getElementById('download-link');
 
-  // Theme handling
+  // Initialize theme
   const stored = localStorage.getItem('site-theme');
   if(stored === 'light') document.body.classList.add('theme-light');
   if(stored === 'dark') document.body.classList.remove('theme-light');
@@ -15,22 +17,32 @@
   }
   if(themeToggle) themeToggle.addEventListener('click', toggleTheme);
 
-  // Smooth scroll for nav links
-  document.querySelectorAll('a.nav-link').forEach(a=>{
-    a.addEventListener('click', e=>{
-      e.preventDefault();
-      const id = a.getAttribute('href').slice(1);
-      const el = document.getElementById(id);
-      if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+  // Mobile nav toggle
+  if(navToggle && navLinks){
+    navToggle.addEventListener('click', ()=>{
+      navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', navLinks.classList.contains('open'));
     });
+  }
+
+  // Smooth scroll for same-page anchors
+  document.querySelectorAll('a.nav-link').forEach(a=>{
+    const href = a.getAttribute('href');
+    if(href && href.startsWith('#')){
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = href.slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    }
   });
 
-  // Reveal on scroll + animate skill bars
+  // Reveal observer + skill bar animate
   const observer = new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
       if(entry.isIntersecting){
         entry.target.classList.add('visible');
-        // animate inside bars
         entry.target.querySelectorAll('.bar span').forEach(el=>{
           const pct = el.dataset.pct || '0%';
           el.style.width = pct;
@@ -38,8 +50,18 @@
       }
     });
   },{threshold:0.12});
-
   document.querySelectorAll('.reveal').forEach(node=>observer.observe(node));
+
+  // Project expand toggles (if any)
+  document.querySelectorAll('.proj .toggle-details').forEach(btn=>{
+    btn.addEventListener('click', e=>{
+      const panel = btn.closest('.proj').querySelector('.proj-details');
+      if(panel){
+        panel.classList.toggle('open');
+        btn.setAttribute('aria-expanded', panel.classList.contains('open'));
+      }
+    });
+  });
 
   // If resume.pdf missing, make download button link to contact
   if(downloadLink){
@@ -48,7 +70,31 @@
     }).catch(()=>{downloadLink.setAttribute('href','#contact');});
   }
 
-  // Accessibility: focus visible for buttons
+  // Contact form UX: try AJAX submit (falls back to native POST if CORS blocks)
+  const contactForm = document.getElementById('contact-form');
+  const contactStatus = document.getElementById('contact-status');
+  if(contactForm){
+    contactForm.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      if(contactStatus) contactStatus.textContent = 'Sending...';
+      const action = contactForm.getAttribute('action') || window.location.href;
+      const formData = new FormData(contactForm);
+
+      try{
+        // Attempt a fetch; use no-cors for Formsubmit to allow the POST
+        await fetch(action, { method: 'POST', body: formData, mode: 'no-cors' });
+        if(contactStatus) contactStatus.textContent = 'Thanks — your message was sent. Please check your email for confirmation.';
+        contactForm.reset();
+      }catch(err){
+        // If fetch fails, fallback to default form submit
+        if(contactStatus) contactStatus.textContent = 'Network error — attempting fallback submit.';
+        contactForm.removeEventListener('submit', arguments.callee);
+        contactForm.submit();
+      }
+    });
+  }
+
+  // Accessibility: show focus outline on keyboard navigation
   document.addEventListener('keyup',e=>{
     if(e.key === 'Tab') document.body.classList.add('show-focus');
   });
