@@ -2,6 +2,8 @@ import { NavBar } from '@/components/NavBar';
 import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/Hero';
 import { Section } from '@/components/Section';
+import Link from 'next/link';
+import { experiences, education, certifications, awards, memberships, skills } from '@/content/resume';
 
 export default function Page() {
   return (
@@ -9,7 +11,7 @@ export default function Page() {
       <NavBar />
       <main>
         <Hero />
-        <Section title="Summary">
+        <Section title="Summary" description="Quick overview. Full details available on dedicated pages.">
           <p className="muted">
             Dynamic and results-driven professional with over 20 years of
             experience in IT, cybersecurity, and enterprise architecture.
@@ -35,113 +37,27 @@ export default function Page() {
             patterns, and working software.
           </p>
         </Section>
-        <Section title="Professional Experience">
+        <Section title="Professional Experience" description="Highlights. See all roles and details.">
           <div className="grid gap-3 md:grid-cols-2">
-            {/* Mangata */}
-            <article className="card">
-              <div className="flex items-start justify-between gap-2">
-                <div>
-                  <h3 className="font-bold">Sr Manager</h3>
-                  <p className="muted">
-                    Veterans Business Continuity Professionals, LLC
-                  </p>
+            {experiences.slice(0, 3).map((exp) => (
+              <article key={`${exp.title}-${exp.org}`} className="card">
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    <h3 className="font-bold">{exp.title}</h3>
+                    <p className="muted">{exp.org}</p>
+                  </div>
+                  <p className="muted">{exp.period}</p>
                 </div>
-                <p className="muted">Aug 2023 – Present</p>
-              </div>
-              <ul className="muted mt-2 grid gap-2 md:grid-cols-2 list-none">
-                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-                  Led veterans-corporate CBCP thinktank advising Fortune-level
-                  companies and nonprofits on resilience.
-                </li>
-                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-                  Designed Enterprise Resilience Office architectures bridging
-                  BC, CM, IT Ops and InfoSec.
-                </li>
-                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-                  Delivered scalable crisis communications and supplier
-                  resilience programs.
-                </li>
-              </ul>
-            </article>
-            <article className="card">
-              <div className="flex items-start justify-between gap-2">
-                <div>
-                  <h3 className="font-bold">
-                    Principal Resilience & IT Consultant
-                  </h3>
-                  <p className="muted">FlexAMS</p>
-                </div>
-                <p className="muted">Jan 2017 – Present</p>
-              </div>
-              <ul className="muted mt-2 grid gap-2 md:grid-cols-2 list-none">
-                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-                  Advised on EHR optimization, cloud integrations, and security
-                  architecture.
-                </li>
-                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-                  Led architectural design and microservices integration
-                  projects.
-                </li>
-              </ul>
-            </article>
-            <article className="card">
-              <div className="flex items-start justify-between gap-2">
-                <div>
-                  <h3 className="font-bold">
-                    Assistant Professor, Computer Information Systems
-                  </h3>
-                  <p className="muted">Saint Leo University</p>
-                </div>
-                <p className="muted">2014 – Present</p>
-              </div>
-              <ul className="muted mt-2 grid gap-2 md:grid-cols-2 list-none">
-                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-                  Developed and taught courses in cybersecurity, software
-                  engineering, and cloud computing.
-                </li>
-                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-                  Led grant collaborations and curriculum modernization efforts.
-                </li>
-              </ul>
-            </article>
-            <article className="card">
-              <div className="flex items-start justify-between gap-2">
-                <div>
-                  <h3 className="font-bold">
-                    Enterprise Architect Engineer & Researcher
-                  </h3>
-                  <p className="muted">Mangata</p>
-                </div>
-                <p className="muted">Jul 2022 – Jun 2023</p>
-              </div>
-              <ul className="muted mt-2 grid gap-2 md:grid-cols-2 list-none">
-                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-                  Designed edge computing solutions and integrated satellite
-                  data flows for enterprise pipelines.
-                </li>
-                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-                  Introduced ML techniques and data engineering patterns to
-                  improve throughput and analytics.
-                </li>
-              </ul>
-            </article>
-            <article className="card">
-              <div className="flex items-start justify-between gap-2">
-                <div>
-                  <h3 className="font-bold">
-                    Health Services Technician & Leadership
-                  </h3>
-                  <p className="muted">U.S. Coast Guard</p>
-                </div>
-                <p className="muted">1995 – 2015</p>
-              </div>
-              <ul className="muted mt-2 grid gap-2 md:grid-cols-2 list-none">
-                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-                  Led clinic operations, training programs and lab operations,
-                  ensuring mission readiness and compliance.
-                </li>
-              </ul>
-            </article>
+                <ul className="muted mt-2 grid gap-2 md:grid-cols-2 list-none">
+                  {exp.bullets.slice(0, 2).map((b) => (
+                    <li key={b} className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">{b}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+          <div className="mt-3 text-right">
+            <Link className="text-accent2" href="/experience">View all experience →</Link>
           </div>
         </Section>
         <Section title="Technical Proficiency">
@@ -184,145 +100,59 @@ export default function Page() {
             <div className="card">📜 Regulatory Compliance</div>
           </div>
         </Section>
-        <Section title="Education">
+        <Section title="Education" description="Selected degrees. See the full academic history.">
           <div className="grid gap-3">
-            <article className="card">
-              <h3 className="font-bold">
-                Graduate Certificate in Artificial Intelligence (In Progress)
-              </h3>
-              <p className="muted">Stanford University</p>
-              <p className="muted">2021 – Present</p>
-            </article>
-            <article className="card">
-              <h3 className="font-bold">
-                Doctorate in Information Technology (DIT)
-              </h3>
-              <p className="muted">Walden University</p>
-              <p className="muted">2020</p>
-            </article>
-            <article className="card">
-              <h3 className="font-bold">M.Sc. in Information Technology</h3>
-              <p className="muted">Walden University</p>
-              <p className="muted">2014 – 2016</p>
-            </article>
-            <article className="card">
-              <h3 className="font-bold">
-                MBA in Information Security Management
-              </h3>
-              <p className="muted">Saint Leo University</p>
-              <p className="muted">2012 – 2014</p>
-            </article>
-            <article className="card">
-              <h3 className="font-bold">
-                B.S. in Business Administration & B.A. in Mass Communication
-              </h3>
-              <p className="muted">University of South Florida</p>
-              <p className="muted">2012 – 2014</p>
-            </article>
-            <article className="card">
-              <h3 className="font-bold">
-                A.A.S. in Medical Laboratory Science
-              </h3>
-              <p className="muted">George Washington University</p>
-              <p className="muted">2001 – 2005</p>
-            </article>
+            {education.slice(0, 3).map((e) => (
+              <article key={`${e.degree}-${e.school}`} className="card">
+                <h3 className="font-bold">{e.degree}</h3>
+                <p className="muted">{e.school}</p>
+                <p className="muted">{e.period}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-3 text-right">
+            <Link className="text-accent2" href="/education">View all education →</Link>
           </div>
         </Section>
-        <Section title="Certifications">
+        <Section title="Certifications" description="Key highlights. Full list available.">
           <ul className="muted grid gap-2 list-none md:grid-cols-2">
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              <strong>Certified Business Continuity Professional (CBCP)</strong>
-              <span className="block muted">DRI International</span>
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              <strong>EMT Certification</strong>
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              <strong>
-                Field Management of Chemical and Biological Incidents
-              </strong>
-              <span className="block muted">U.S. Army</span>
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              <strong>Independent Health Services Technician</strong>
-              <span className="block muted">U.S. Navy Health Science</span>
-            </li>
+            {certifications.slice(0, 4).map((c) => (
+              <li key={c.name} className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
+                <strong>{c.name}</strong>
+                {c.issuer ? <span className="block muted">{c.issuer}</span> : null}
+              </li>
+            ))}
           </ul>
+          <div className="mt-3 text-right">
+            <Link className="text-accent2" href="/certifications">View all certifications →</Link>
+          </div>
         </Section>
-        <Section title="Awards & Recognition">
+        <Section title="Awards & Recognition" description="Selected achievements.">
           <ul className="muted grid gap-2 list-none md:grid-cols-2">
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Coast Guard Achievement Medal (Gold Star)
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Coast Guard Unit Commendation Ribbon (x2)
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Coast Guard Meritorious Team Commendation Ribbon (Silver Star)
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Commandant Letter of Commendation (x2 Gold Stars)
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Coast Guard Presidential Unit Citation Ribbon
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Coast Guard Sea Service Ribbon
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Saint Leo University 5-Year Service Award, 2019
-            </li>
+            {awards.slice(0, 6).map((a) => (
+              <li key={a} className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">{a}</li>
+            ))}
           </ul>
+          <div className="mt-3 text-right">
+            <Link className="text-accent2" href="/awards">View all awards →</Link>
+          </div>
         </Section>
         <Section title="Professional Memberships">
           <ul className="muted grid gap-2 list-none md:grid-cols-2">
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Association for Computing Machinery (ACM)
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              National CyberWatch Center
-            </li>
+            {memberships.slice(0, 2).map((m) => (
+              <li key={m} className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">{m}</li>
+            ))}
           </ul>
         </Section>
         <Section title="Core Skills & Capabilities">
           <ul className="muted grid gap-2 list-none md:grid-cols-2">
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Technical Coaching & Mentorship
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Enterprise-Scale Application Architecture
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Cloud Migration & Modernization
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Structured Design & Documentation
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Application Assessment & Strategy (6R)
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Post-Migration Optimization & Support
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Crisis Management & Operational Coordination
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Risk Management & Cybersecurity
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Cloud Computing (Azure, GCP)
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Incident Response & Problem Management
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Strategic Team Management
-            </li>
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              Cross-Functional Team Leadership
-            </li>
+            {skills.slice(0, 8).map((s) => (
+              <li key={s} className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">{s}</li>
+            ))}
           </ul>
+          <div className="mt-3 text-right">
+            <Link className="text-accent2" href="/skills">View all skills →</Link>
+          </div>
         </Section>
         <Section title="Contact">
           <form
