@@ -13,6 +13,13 @@ Files of interest:
 ```
 
 - `resume.js` — JavaScript for theme toggle, smooth scrolling, and skill-bar animation. Skill percentages are stored in `data-pct` attributes on `.bar span` elements in `index.html`.
+ - `resume.js` — JavaScript for theme toggle, smooth scrolling, and skill-bar animation. Skill percentages are stored in `data-pct` attributes on `.bar span` elements in `index.html`.
+
+Form integrations
+
+- The contact form in `index.html` is configured to use Formsubmit by default (no account required): `action="https://formsubmit.co/contact@joshuaadams.dev"`.
+- To use Formspree instead, create a form in Formspree (https://formspree.io) and replace the form `action` with the Formspree endpoint (for example `https://formspree.io/f/yourFormId`).
+
 - `avatar.png` — headshot used in the hero. Replace this file with a new image (140×140 recommended) to update the photo.
 - `resume.pdf` — if you want the Download button to provide a PDF, place a `resume.pdf` file in the repository root. If missing, the button falls back to the contact section.
 
