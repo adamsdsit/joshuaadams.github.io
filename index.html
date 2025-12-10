@@ -225,6 +225,39 @@
       </ul>
     </div>
   </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact-section reveal">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, use the form below or email <a href="mailto:contact@joshuaadams.dev">contact@joshuaadams.dev</a>.</p>
+
+      <!--
+        Form integration:
+        - By default this posts to Formsubmit (no account needed): action="https://formsubmit.co/contact@joshuaadams.dev"
+        - To use Formspree replace the action with your Formspree endpoint (e.g. https://formspree.io/f/yourFormId)
+      -->
+      <form id="contact-form" class="contact-form" method="POST" action="https://formsubmit.co/contact@joshuaadams.dev">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+        <input type="hidden" name="_subject" value="Website Contact: Resume Site">
+        <div style="margin-top:.6rem;display:flex;gap:.6rem">
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <button class="btn btn-ghost" type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </section>
 </main>
   </main>
 
@@ -234,6 +267,6 @@
       <a href="https://www.linkedin.com/in/adamdsit/" target="_blank">LinkedIn</a>
     </p>
   </footer>
-  <script src="scripts.js"></script>
+  <script src="resume.js" defer></script>
 </body>
 </html>
