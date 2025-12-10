@@ -90,36 +90,55 @@ curl -sS -o /dev/null -w "https://joshuaadams.dev: %{http_code}\n" https://joshu
 ## CI Status
 
 [![Deploy Next.js to GitHub Pages](https://github.com/adamsdsit/joshuaadams.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/adamsdsit/joshuaadams.github.io/actions/workflows/pages.yml)
+[![Accessibility](https://github.com/adamsdsit/joshuaadams.github.io/actions/workflows/a11y.yml/badge.svg)](https://github.com/adamsdsit/joshuaadams.github.io/actions/workflows/a11y.yml)
+[![Lighthouse](https://github.com/adamsdsit/joshuaadams.github.io/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/adamsdsit/joshuaadams.github.io/actions/workflows/lighthouse.yml)
 
 ## Troubleshooting
 
 - **Pages not updating:**
-	- Confirm GitHub → Settings → Pages → Source is set to "GitHub Actions".
-	- Check the workflow run in Actions; ensure the "Upload artifact" and "Deploy to GitHub Pages" steps succeeded.
-	- Verify `CNAME` exists in the repo root and is copied into `next-site/out` during the workflow.
-	- Ensure `.nojekyll` is present so Pages serves files under `out/` correctly.
+  - Confirm GitHub → Settings → Pages → Source is set to "GitHub Actions".
+  - Check the workflow run in Actions; ensure the "Upload artifact" and "Deploy to GitHub Pages" steps succeeded.
+  - Verify `CNAME` exists in the repo root and is copied into `next-site/out` during the workflow.
+  - Ensure `.nojekyll` is present so Pages serves files under `out/` correctly.
 
 - **404s on internal routes or refresh:**
-	- `next export` outputs static files only. Keep `trailingSlash: true` so directories export with `index.html`.
-	- Avoid server-only features (SSR/ISR/API). Use static pages under `src/app/.../page.tsx`.
-	- For nested pages, ensure each route has a `page.tsx` (e.g., `src/app/teaching/page.tsx`).
+  - `next export` outputs static files only. Keep `trailingSlash: true` so directories export with `index.html`.
+  - Avoid server-only features (SSR/ISR/API). Use static pages under `src/app/.../page.tsx`.
+  - For nested pages, ensure each route has a `page.tsx` (e.g., `src/app/teaching/page.tsx`).
 
 - **Images not loading:**
-	- `images.unoptimized` is enabled for export; place assets in `next-site/public` and reference as `/asset.png`.
-	- Avoid external `http:` images; use `https:` to prevent mixed-content blocking on Pages.
+  - `images.unoptimized` is enabled for export; place assets in `next-site/public` and reference as `/asset.png`.
+  - Avoid external `http:` images; use `https:` to prevent mixed-content blocking on Pages.
 
 - **Custom domain not applied:**
-	- Confirm `CNAME` contains `joshuaadams.dev` and is committed to the repository.
-	- In GitHub → Settings → Pages, set the Custom domain to `joshuaadams.dev` and verify DNS is correctly configured.
+  - Confirm `CNAME` contains `joshuaadams.dev` and is committed to the repository.
+  - In GitHub → Settings → Pages, set the Custom domain to `joshuaadams.dev` and verify DNS is correctly configured.
 
 - **Build failures (Actions):**
-	- Ensure Node 20+ is used (handled by `actions/setup-node@v4`).
-	- Missing dependencies: check `next-site/package.json`; the workflow runs `npm ci || npm install`.
-	- Path issues: confirm the build steps run in `working-directory: next-site` in the workflow.
+  - Ensure Node 20+ is used (handled by `actions/setup-node@v4`).
+  - Missing dependencies: check `next-site/package.json`; the workflow runs `npm ci || npm install`.
+  - Path issues: confirm the build steps run in `working-directory: next-site` in the workflow.
 
 - **Contact form not sending:**
-	- For Formsubmit, verify the `action` email address and test with a simple message.
-	- Consider Formspree for more robust handling and dashboards.
+  - For Formsubmit, verify the `action` email address and test with a simple message.
+  - Consider Formspree for more robust handling and dashboards.
+
+## Quality Checks (A11y & Performance)
+
+You can run accessibility and performance checks in CI (no local Chrome required):
+
+- Accessibility: the `Accessibility` workflow runs Pa11y on `https://joshuaadams.dev` and uploads a text report.
+- Performance: the `Lighthouse` workflow runs Lighthouse and uploads an HTML report as an artifact.
+
+Trigger them manually from the Actions tab (Run workflow), or wait for a push to `main`.
+
+Local equivalents (if Chrome is installed):
+
+```bash
+cd next-site
+npm run a11y
+npm run lh
+```
 
 ## Custom Domain DNS
 
@@ -128,8 +147,8 @@ To serve `joshuaadams.dev` from GitHub Pages:
 - **CNAME file:** Ensure a `CNAME` file in the repo root contains exactly `joshuaadams.dev`.
 - **GitHub Pages settings:** In GitHub → Settings → Pages, set the Custom domain to `joshuaadams.dev`.
 - **DNS records:** Configure your DNS provider for either apex or subdomain:
-	- Apex (`joshuaadams.dev`): Use `ALIAS`/`ANAME` to `adamsdsit.github.io` if your DNS supports it, or set A records to the GitHub Pages addresses as documented by GitHub.
-	- Subdomain (`www.joshuaadams.dev`): Create a CNAME record pointing to `adamsdsit.github.io`.
+  - Apex (`joshuaadams.dev`): Use `ALIAS`/`ANAME` to `adamsdsit.github.io` if your DNS supports it, or set A records to the GitHub Pages addresses as documented by GitHub.
+  - Subdomain (`www.joshuaadams.dev`): Create a CNAME record pointing to `adamsdsit.github.io`.
 - **Propagation:** DNS changes can take time to propagate; verify with `dig` and confirm the Pages deploy references your custom domain.
 
 Quick checks:
