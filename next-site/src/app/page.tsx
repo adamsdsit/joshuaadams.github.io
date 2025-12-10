@@ -121,21 +121,36 @@ export default function Page(){
             <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Coast Guard Achievement Medal (Gold Star)</li>
           </ul>
         </Section>
-        <Section title="Contact" >
-          <form className="grid gap-3" method="POST" action="https://formsubmit.co/contact@joshuaadams.dev">
-            <label className="grid gap-1">
-              <span>Name</span>
-              <input className="rounded-lg bg-slate-800/40 border border-white/10 p-2" type="text" name="name" required />
-            </label>
-            <label className="grid gap-1">
-              <span>Email</span>
-              <input className="rounded-lg bg-slate-800/40 border border-white/10 p-2" type="email" name="email" required />
-            </label>
-            <label className="grid gap-1">
-              <span>Message</span>
-              <textarea className="rounded-lg bg-slate-800/40 border border-white/10 p-2" name="message" rows={6} required />
-            </label>
-            <input type="hidden" name="_subject" value="Website Contact: Resume Site" />
+        <Section title="Contact">
+          <form className="grid gap-3" method="POST" action="https://formsubmit.co/contact@joshuaadams.dev" noValidate>
+            <div className="grid gap-1">
+              <label htmlFor="name">Full Name</label>
+              <input id="name" className="rounded-lg bg-slate-800/40 border border-white/10 p-2" type="text" name="name" placeholder="John Doe" required aria-required="true" />
+            </div>
+            <div className="grid gap-1">
+              <label htmlFor="email">Business Email</label>
+              <input id="email" className="rounded-lg bg-slate-800/40 border border-white/10 p-2" type="email" name="email" placeholder="you@company.com" inputMode="email" required aria-required="true" />
+            </div>
+            <div className="grid gap-1">
+              <label htmlFor="message">Project Summary</label>
+              <textarea id="message" className="rounded-lg bg-slate-800/40 border border-white/10 p-2" name="message" rows={6} placeholder="Briefly describe your goals and timeline" required aria-required="true" />
+            </div>
+            {/* Professional options */}
+            <div className="grid gap-1 md:grid-cols-2">
+              <div className="grid gap-1">
+                <label htmlFor="budget">Budget Range (optional)</label>
+                <input id="budget" className="rounded-lg bg-slate-800/40 border border-white/10 p-2" type="text" name="budget" placeholder="$25k–$50k" />
+              </div>
+              <div className="grid gap-1">
+                <label htmlFor="timeline">Target Timeline (optional)</label>
+                <input id="timeline" className="rounded-lg bg-slate-800/40 border border-white/10 p-2" type="text" name="timeline" placeholder="Q1 2026" />
+              </div>
+            </div>
+            {/* Formsubmit enhancements */}
+            <input type="hidden" name="_subject" value="Resume Site Contact" />
+            <input type="hidden" name="_next" value="https://joshuaadams.dev/?contact=success" />
+            <input type="text" name="_honey" style={{ display: 'none' }} aria-hidden="true" tabIndex={-1} />
+            <div className="muted text-sm">By sending this form, you consent to be contacted at the provided email. For direct inquiries, email <a className="text-accent2" href="mailto:contact@joshuaadams.dev">contact@joshuaadams.dev</a>.</div>
             <div className="flex gap-2 mt-2">
               <button className="btn btn-primary" type="submit">Send Message</button>
               <button className="btn" type="reset">Reset</button>
