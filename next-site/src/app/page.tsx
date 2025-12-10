@@ -100,9 +100,9 @@ export default function Page() {
             <div className="card">📜 Regulatory Compliance</div>
           </div>
         </Section>
-        <Section title="Education" description="Selected degrees. See the full academic history.">
-          <div className="grid gap-3">
-            {education.slice(0, 3).map((e) => (
+        <Section title="Education" description="Key degrees at a glance. View the full academic history.">
+          <div className="grid gap-3 md:grid-cols-2">
+            {education.slice(0, 4).map((e) => (
               <article key={`${e.degree}-${e.school}`} className="card">
                 <h3 className="font-bold">{e.degree}</h3>
                 <p className="muted">{e.school}</p>
@@ -115,41 +115,41 @@ export default function Page() {
           </div>
         </Section>
         <Section title="Certifications" description="Key highlights. Full list available.">
-          <ul className="muted grid gap-2 list-none md:grid-cols-2">
+          <div className="grid gap-3 md:grid-cols-2">
             {certifications.slice(0, 4).map((c) => (
-              <li key={c.name} className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
+              <article key={c.name} className="card">
                 <strong>{c.name}</strong>
                 {c.issuer ? <span className="block muted">{c.issuer}</span> : null}
-              </li>
+              </article>
             ))}
-          </ul>
+          </div>
           <div className="mt-3 text-right">
             <Link className="text-accent2" href="/certifications">View all certifications →</Link>
           </div>
         </Section>
         <Section title="Awards & Recognition" description="Selected achievements.">
-          <ul className="muted grid gap-2 list-none md:grid-cols-2">
-            {awards.slice(0, 6).map((a) => (
-              <li key={a} className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">{a}</li>
+          <div className="grid gap-3 md:grid-cols-2">
+            {awards.slice(0, 4).map((a) => (
+              <article key={a} className="card">{a}</article>
             ))}
-          </ul>
+          </div>
           <div className="mt-3 text-right">
             <Link className="text-accent2" href="/awards">View all awards →</Link>
           </div>
         </Section>
         <Section title="Professional Memberships">
-          <ul className="muted grid gap-2 list-none md:grid-cols-2">
-            {memberships.slice(0, 2).map((m) => (
-              <li key={m} className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">{m}</li>
+          <div className="grid gap-3 md:grid-cols-2">
+            {memberships.map((m) => (
+              <article key={m} className="card">{m}</article>
             ))}
-          </ul>
+          </div>
         </Section>
         <Section title="Core Skills & Capabilities">
-          <ul className="muted grid gap-2 list-none md:grid-cols-2">
+          <div className="grid gap-3 md:grid-cols-2">
             {skills.slice(0, 8).map((s) => (
-              <li key={s} className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">{s}</li>
+              <article key={s} className="card">{s}</article>
             ))}
-          </ul>
+          </div>
           <div className="mt-3 text-right">
             <Link className="text-accent2" href="/skills">View all skills →</Link>
           </div>
