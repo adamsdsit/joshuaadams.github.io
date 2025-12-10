@@ -14,22 +14,23 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">Joshua Adams</a>
-      <nav class="nav-links">
-        <a class="nav-link" href="#summary">Summary</a>
-        <a class="nav-link" href="#experience">Experience</a>
-        <a class="nav-link" href="#skills">Skills</a>
-        <a class="nav-link" href="#projects">Projects</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav-links" id="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="teaching.html">Teaching</a>
         <a class="nav-link" href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
         <button id="theme-toggle" aria-label="Toggle theme" class="icon-btn">🌓</button>
-        <a class="btn btn-primary" href="#download" id="download-btn">Download CV</a>
+        <a class="btn btn-primary" href="resume.pdf" id="download-btn">Download CV</a>
       </div>
     </div>
   </header>
 
   <main class="site-content container">
   <!-- Hero -->
+  <a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;top:auto;">Skip to content</a>
   <section id="hero" class="section hero-section">
     <div class="hero-grid">
       <div class="hero-left">
@@ -41,7 +42,7 @@
         <p class="hero-blurb">Seasoned IT and resilience professional with 20+ years leading technical programs, teaching, and consulting. I design resilient systems, lead cross-functional teams, and translate complex technical needs into strategic outcomes.</p>
         <div class="hero-ctas">
           <a href="#contact" class="btn">Contact</a>
-          <a href="#projects" class="btn btn-ghost">Projects</a>
+          <a href="projects.html" class="btn btn-ghost">Projects</a>
           <a href="resume.pdf" class="btn btn-primary" id="download-link">Download PDF</a>
         </div>
         <ul class="contact-inline">
@@ -66,81 +67,78 @@
   <section id="experience" class="section experience-section reveal">
     <div class="card">
       <h2>Professional Experience</h2>
-      <article class="experience-item">
-        <div class="item-header">
-          <h3 class="item-title">Sr Manager</h3>
-          <p class="item-subtitle">Veterans Business Continuity Professionals, LLC</p>
-          <p class="item-date">August 2023 – Present</p>
-        </div>
-        <ul class="item-highlights">
-          <li>Lead veterans-corporate CBCP thinktank and action group in US analyzing and helping companies, including four Fortune 150 companies and nonprofits prepare, respond and recover from manmade and natural disasters.</li>
-          <li>Created Enterprise Resilience Office architecture aligning senior leaders to understand the need for a resilience program consisting of BC, CM, IT operations, Information Security and Physical Security.</li>
-          <li>Developed and implemented BC and CM program planning focused on business resiliency with significant supplier base providing critical business functions.</li>
-          <li>Created programs to align against regulatory mandates requiring extensive coordination with primary functions and compliance offices.</li>
-          <li>Deployed technology solutions for cost-effective corporate crisis communication across geographically dispersed workforces.</li>
-        </ul>
-      </article>
+      <div class="experience-grid">
+        <article class="experience-item">
+          <div class="item-header">
+            <div>
+              <h3 class="item-title">Sr Manager</h3>
+              <div class="item-meta">Veterans Business Continuity Professionals, LLC</div>
+            </div>
+            <div class="item-meta">Aug 2023 – Present</div>
+          </div>
+          <ul class="item-highlights">
+            <li>Led veterans-corporate CBCP thinktank advising Fortune-level companies and nonprofits on resilience.</li>
+            <li>Designed Enterprise Resilience Office architectures that bridge BC, CM, IT Ops and InfoSec.</li>
+            <li>Delivered scalable crisis communications and supplier resilience programs.</li>
+          </ul>
+        </article>
 
-      <article class="experience-item">
-        <div class="item-header">
-          <h3 class="item-title">Principal Resilience and IT Consultant</h3>
-          <p class="item-subtitle">FlexAMS</p>
-          <p class="item-date">Jan 2017 – Present</p>
-        </div>
-        <ul class="item-highlights">
-          <li>Provided strategic IT consulting services with a focus on EHR optimization, integration, and security.</li>
-          <li>Led architectural and design discussions, translating complex business needs into scalable technical solutions.</li>
-          <li>Managed multiple projects simultaneously, ensuring adherence to tight deadlines and delivering efficient IT solutions.</li>
-          <li>Developed and maintained customer relationships, providing IT support and guidance.</li>
-          <li>Led the research and development of new methods for integrating micro-services, cloud ops.</li>
-          <li>Emphasized a data-driven approach and user feedback to drive product development.</li>
-        </ul>
-      </article>
+        <article class="experience-item">
+          <div class="item-header">
+            <div>
+              <h3 class="item-title">Principal Resilience & IT Consultant</h3>
+              <div class="item-meta">FlexAMS</div>
+            </div>
+            <div class="item-meta">Jan 2017 – Present</div>
+          </div>
+          <ul class="item-highlights">
+            <li>Advised on EHR optimization, cloud integrations, and security architecture.</li>
+            <li>Led architectural design and microservices integration projects.</li>
+          </ul>
+        </article>
 
-      <article class="experience-item">
-        <div class="item-header">
-          <h3 class="item-title">Assistant Professor, Computer Information Systems</h3>
-          <p class="item-subtitle">Saint Leo University</p>
-          <p class="item-date">2014 – Present</p>
-        </div>
-        <ul class="item-highlights">
-          <li>Developed and taught courses in cybersecurity, system analysis, software engineering, and cloud computing.</li>
-          <li>Partnered with Carnegie Mellon University on grant collaborations, securing funding and ensuring curriculum relevance.</li>
-          <li>Integrated emerging technologies into academic curricula, focusing on cloud security and cybersecurity.</li>
-          <li>Led development sessions for educators, incorporating cloud computing concepts and cybersecurity best practices.</li>
-          <li>Established strategic partnerships with industry leaders like Microsoft and Google, enhancing educational offerings.</li>
-        </ul>
-      </article>
+        <article class="experience-item">
+          <div class="item-header">
+            <div>
+              <h3 class="item-title">Assistant Professor, Computer Information Systems</h3>
+              <div class="item-meta">Saint Leo University</div>
+            </div>
+            <div class="item-meta">2014 – Present</div>
+          </div>
+          <ul class="item-highlights">
+            <li>Developed and taught courses in cybersecurity, software engineering, and cloud computing.</li>
+            <li>Led grant collaborations and curriculum modernization efforts.</li>
+          </ul>
+        </article>
 
-      <article class="experience-item">
-        <div class="item-header">
-          <h3 class="item-title">Enterprise Architect Engineer and Researcher</h3>
-          <p class="item-subtitle">Mangata</p>
-          <p class="item-date">July 2022 – June 2023</p>
-        </div>
-        <ul class="item-highlights">
-          <li>Led the design and development of enterprise-level software solutions, focusing on edge computing infrastructure and satellite systems integration.</li>
-          <li>Managed and empowered a team of engineers to deliver exceptional results.</li>
-          <li>Partnered closely with design, engineering, and other internal teams to drive product and delivery success.</li>
-          <li>Explored and implemented machine learning techniques and novel database schemes to improve data processing.</li>
-          <li>Contributed to defining and tracking KPIs and metrics to develop data-driven decision-making.</li>
-        </ul>
-      </article>
+        <article class="experience-item">
+          <div class="item-header">
+            <div>
+              <h3 class="item-title">Enterprise Architect Engineer & Researcher</h3>
+              <div class="item-meta">Mangata</div>
+            </div>
+            <div class="item-meta">Jul 2022 – Jun 2023</div>
+          </div>
+          <ul class="item-highlights">
+            <li>Designed edge computing solutions and integrated satellite data flows for enterprise pipelines.</li>
+            <li>Introduced ML techniques and data engineering patterns to improve throughput and analytics.</li>
+          </ul>
+        </article>
 
-      <article class="experience-item">
-        <div class="item-header">
-          <h3 class="item-title">Health Services Technician & Leadership Roles</h3>
-          <p class="item-subtitle">U.S. Coast Guard</p>
-          <p class="item-date">1995 – 2015</p>
-        </div>
-        <ul class="item-highlights">
-          <li>Managed active-duty enlisted members at a Coast Guard clinic, providing comprehensive medical support.</li>
-          <li>Led the operations of the Coast Guard Academy’s laboratory.</li>
-          <li>Demonstrated leadership in mission-critical projects.</li>
-          <li>Developed and delivered training programs, improving the competency and readiness of medical teams.</li>
-          <li>Ensured compliance with healthcare standards and regulations.</li>
-        </ul>
-      </article>
+        <article class="experience-item">
+          <div class="item-header">
+            <div>
+              <h3 class="item-title">Health Services Technician & Leadership</h3>
+              <div class="item-meta">U.S. Coast Guard</div>
+            </div>
+            <div class="item-meta">1995 – 2015</div>
+          </div>
+          <ul class="item-highlights">
+            <li>Led clinic operations, training programs and lab operations, ensuring mission readiness and compliance.</li>
+          </ul>
+        </article>
+
+      </div>
     </div>
   </section>
 
