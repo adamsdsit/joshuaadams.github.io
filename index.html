@@ -14,7 +14,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">Joshua Adams</a>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">☰</button>
       <nav class="nav-links" id="nav-links">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="projects.html">Projects</a>
@@ -28,10 +28,10 @@
     </div>
   </header>
 
-  <main class="site-content container">
+  <main id="main-content" class="site-content container">
   <!-- Hero -->
-  <a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;top:auto;">Skip to content</a>
-      <form id="contact-form" class="contact-form" method="POST" action="https://formsubmit.co/contact@joshuaadams.dev">
+      <a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;top:auto;">Skip to content</a>
+  <section class="hero-section">
     <div class="hero-grid">
       <div class="hero-left">
         <img src="avatar.png" alt="Joshua Adams" class="avatar">
@@ -258,7 +258,6 @@
     </div>
   </section>
 </main>
-  </main>
 
   <footer class="footer">
     <p>© Joshua Adams  |  Built with ❤️</p>
