@@ -11,9 +11,11 @@ export default function Page(){
         <Hero />
         <Section title="Summary">
           <p className="muted">Dynamic and results-driven professional with over 20 years of experience in IT, cybersecurity, and enterprise architecture. Certified Business Continuity Professional (CBCP) with proven expertise in technical project management, stakeholder management, and leading cross-functional teams. Adept at leveraging emerging technologies, data analysis, and developing innovative solutions. Experienced in coding, technical troubleshooting, and AI/machine learning. Passionate about driving strategic growth and improving customer experience.</p>
+              <p className="muted mt-2">Senior technology leader with 20+ years of experience across software engineering, DevSecOps, and enterprise/cloud architecture, including large-scale healthcare and regulated environments. Proven track record coaching engineering teams, optimizing value streams, and driving modern engineering practices (cloud-native architectures, CI/CD, automation, observability, security-by-design). Experienced in AI/ML research and applying emerging technologies to improve reliability, speed, and customer outcomes. Comfortable operating as a hands-on technical coach, architect, and educator—translating strategy into practices, patterns, and working software.</p>
         </Section>
         <Section title="Professional Experience">
           <div className="grid gap-3 md:grid-cols-2">
+                {/* Mangata */}
             <article className="card">
               <div className="flex items-start justify-between gap-2">
                 <div>
@@ -121,30 +123,57 @@ export default function Page(){
             <div className="card">📜 Regulatory Compliance</div>
           </div>
         </Section>
-        <Section title="Education">
-          <article className="card">
-            <div className="flex items-start justify-between gap-2">
-              <div>
-                <h3 className="font-bold">Doctorate in Information Technology</h3>
-                <p className="muted">Walden University</p>
+            <Section title="Education">
+              <div className="grid gap-3">
+                <article className="card"><h3 className="font-bold">Graduate Certificate in Artificial Intelligence (In Progress)</h3><p className="muted">Stanford University</p><p className="muted">2021 – Present</p></article>
+                <article className="card"><h3 className="font-bold">Doctorate in Information Technology (DIT)</h3><p className="muted">Walden University</p><p className="muted">2020</p></article>
+                <article className="card"><h3 className="font-bold">M.Sc. in Information Technology</h3><p className="muted">Walden University</p><p className="muted">2014 – 2016</p></article>
+                <article className="card"><h3 className="font-bold">MBA in Information Security Management</h3><p className="muted">Saint Leo University</p><p className="muted">2012 – 2014</p></article>
+                <article className="card"><h3 className="font-bold">B.S. in Business Administration & B.A. in Mass Communication</h3><p className="muted">University of South Florida</p><p className="muted">2012 – 2014</p></article>
+                <article className="card"><h3 className="font-bold">A.A.S. in Medical Laboratory Science</h3><p className="muted">George Washington University</p><p className="muted">2001 – 2005</p></article>
               </div>
-              <p className="muted">2020</p>
-            </div>
-          </article>
-        </Section>
-        <Section title="Certifications">
-          <ul className="muted grid gap-2 list-none md:grid-cols-2">
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">
-              <strong>Certified Business Continuity Professional (CBCP)</strong>
-              <span className="block muted">DRI International, 2023</span>
-            </li>
-          </ul>
-        </Section>
-        <Section title="Awards & Recognition">
-          <ul className="muted grid gap-2 list-none md:grid-cols-2">
-            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Coast Guard Achievement Medal (Gold Star)</li>
-          </ul>
-        </Section>
+            </Section>
+            <Section title="Certifications">
+              <ul className="muted grid gap-2 list-none md:grid-cols-2">
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full"><strong>Certified Business Continuity Professional (CBCP)</strong><span className="block muted">DRI International</span></li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full"><strong>EMT Certification</strong></li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full"><strong>Field Management of Chemical and Biological Incidents</strong><span className="block muted">U.S. Army</span></li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full"><strong>Independent Health Services Technician</strong><span className="block muted">U.S. Navy Health Science</span></li>
+              </ul>
+            </Section>
+            <Section title="Awards & Recognition">
+              <ul className="muted grid gap-2 list-none md:grid-cols-2">
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Coast Guard Achievement Medal (Gold Star)</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Coast Guard Unit Commendation Ribbon (x2)</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Coast Guard Meritorious Team Commendation Ribbon (Silver Star)</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Commandant Letter of Commendation (x2 Gold Stars)</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Coast Guard Presidential Unit Citation Ribbon</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Coast Guard Sea Service Ribbon</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Saint Leo University 5-Year Service Award, 2019</li>
+              </ul>
+            </Section>
+            <Section title="Professional Memberships">
+              <ul className="muted grid gap-2 list-none md:grid-cols-2">
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Association for Computing Machinery (ACM)</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">National CyberWatch Center</li>
+              </ul>
+            </Section>
+            <Section title="Core Skills & Capabilities">
+              <ul className="muted grid gap-2 list-none md:grid-cols-2">
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Technical Coaching & Mentorship</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Enterprise-Scale Application Architecture</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Cloud Migration & Modernization</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Structured Design & Documentation</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Application Assessment & Strategy (6R)</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Post-Migration Optimization & Support</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Crisis Management & Operational Coordination</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Risk Management & Cybersecurity</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Cloud Computing (Azure, GCP)</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Incident Response & Problem Management</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Strategic Team Management</li>
+                <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Cross-Functional Team Leadership</li>
+              </ul>
+            </Section>
         <Section title="Contact">
           <form className="grid gap-3" method="POST" action="https://formsubmit.co/contact@joshuaadams.dev" noValidate>
             <div className="grid gap-1">
