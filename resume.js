@@ -9,7 +9,12 @@
   // Initialize theme
   const stored = localStorage.getItem('site-theme');
   if(stored === 'light') document.body.classList.add('theme-light');
-  if(stored === 'dark') document.body.classList.remove('theme-light');
+  else if(stored === 'dark') document.body.classList.remove('theme-light');
+
+  // Accessibility: ensure nav-toggle reports initial state
+  if(navToggle){
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
 
   function toggleTheme(){
     const isLight = document.body.classList.toggle('theme-light');
@@ -24,6 +29,15 @@
       navToggle.setAttribute('aria-expanded', navLinks.classList.contains('open'));
     });
   }
+
+  // Close mobile nav with Escape key for accessibility
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape' && navLinks && navLinks.classList.contains('open')){
+      navLinks.classList.remove('open');
+      if(navToggle) navToggle.setAttribute('aria-expanded','false');
+      navToggle.focus();
+    }
+  });
 
   // Smooth scroll for same-page anchors
   document.querySelectorAll('a.nav-link').forEach(a=>{
