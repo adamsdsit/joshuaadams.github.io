@@ -116,6 +116,11 @@ export default function Page(){
             </li>
           </ul>
         </Section>
+        <Section title="Awards & Recognition">
+          <ul className="muted grid gap-2 list-none md:grid-cols-2">
+            <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[0.6em] before:w-1.5 before:h-1.5 before:bg-accent before:rounded-full">Coast Guard Achievement Medal (Gold Star)</li>
+          </ul>
+        </Section>
         <Section title="Contact" >
           <form className="grid gap-3" method="POST" action="https://formsubmit.co/contact@joshuaadams.dev">
             <label className="grid gap-1">
