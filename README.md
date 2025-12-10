@@ -121,6 +121,25 @@ curl -sS -o /dev/null -w "https://joshuaadams.dev: %{http_code}\n" https://joshu
 	- For Formsubmit, verify the `action` email address and test with a simple message.
 	- Consider Formspree for more robust handling and dashboards.
 
+## Custom Domain DNS
+
+To serve `joshuaadams.dev` from GitHub Pages:
+
+- **CNAME file:** Ensure a `CNAME` file in the repo root contains exactly `joshuaadams.dev`.
+- **GitHub Pages settings:** In GitHub → Settings → Pages, set the Custom domain to `joshuaadams.dev`.
+- **DNS records:** Configure your DNS provider for either apex or subdomain:
+	- Apex (`joshuaadams.dev`): Use `ALIAS`/`ANAME` to `adamsdsit.github.io` if your DNS supports it, or set A records to the GitHub Pages addresses as documented by GitHub.
+	- Subdomain (`www.joshuaadams.dev`): Create a CNAME record pointing to `adamsdsit.github.io`.
+- **Propagation:** DNS changes can take time to propagate; verify with `dig` and confirm the Pages deploy references your custom domain.
+
+Quick checks:
+
+```sh
+dig +short joshuaadams.dev
+dig +short www.joshuaadams.dev CNAME
+curl -sS -o /dev/null -w "https://joshuaadams.dev: %{http_code}\n" https://joshuaadams.dev
+```
+
 ## Makefile (convenience)
 
 - `make serve` — start a local static server on port `9002`
