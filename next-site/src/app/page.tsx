@@ -10,7 +10,7 @@ export default function Page(){
       <main>
         <Hero />
         <Section title="Summary">
-          <p className="muted">Dynamic and results-driven professional with over 20 years of experience in IT, cybersecurity, and enterprise architecture. Certified Business Continuity Professional (CBCP) with proven expertise in technical project management, stakeholder management, and leading cross-functional teams.</p>
+          <p className="muted">Dynamic and results-driven professional with over 20 years of experience in IT, cybersecurity, and enterprise architecture. Certified Business Continuity Professional (CBCP) with proven expertise in technical project management, stakeholder management, and leading cross-functional teams. Adept at leveraging emerging technologies, data analysis, and developing innovative solutions. Experienced in coding, technical troubleshooting, and AI/machine learning. Passionate about driving strategic growth and improving customer experience.</p>
         </Section>
         <Section title="Professional Experience">
           <div className="grid gap-3 md:grid-cols-2">
@@ -81,7 +81,7 @@ export default function Page(){
             </article>
           </div>
         </Section>
-        <Section title="Skills">
+        <Section title="Technical Proficiency">
           <div className="grid gap-3 md:grid-cols-2">
             <div className="card">
               <strong>Cloud & Infrastructure</strong>
@@ -95,6 +95,30 @@ export default function Page(){
                 <div className="h-full w-[88%] bg-gradient-to-r from-accent2 to-accent rounded"></div>
               </div>
             </div>
+            <div className="card">
+              <strong>Architecture & Systems</strong>
+              <div className="h-3 bg-slate-700/40 rounded mt-2">
+                <div className="h-full w-[86%] bg-gradient-to-r from-accent2 to-accent rounded"></div>
+              </div>
+            </div>
+            <div className="card">
+              <strong>Teaching & Research</strong>
+              <div className="h-3 bg-slate-700/40 rounded mt-2">
+                <div className="h-full w-[92%] bg-gradient-to-r from-accent2 to-accent rounded"></div>
+              </div>
+            </div>
+          </div>
+        </Section>
+        <Section title="Leadership Expertise">
+          <div className="grid gap-2 md:grid-cols-2">
+            <div className="card">👥 Team Building &amp; Management</div>
+            <div className="card">🤝 Cross-Functional Collaboration</div>
+            <div className="card">⚖️ Conflict Resolution</div>
+            <div className="card">📈 Business Development</div>
+            <div className="card">🧭 Organizational Strategy</div>
+            <div className="card">🔄 Digital Transformation</div>
+            <div className="card">📊 Portfolio Management</div>
+            <div className="card">📜 Regulatory Compliance</div>
           </div>
         </Section>
         <Section title="Education">
