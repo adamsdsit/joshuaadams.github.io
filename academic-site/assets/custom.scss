@@ -6,3 +6,15 @@
 body {
   font-feature-settings: "liga" 1, "kern" 1;
 }
+
+.page-header { margin-bottom: 1rem; }
+.pub-controls { display:flex; gap:1rem; align-items:center; justify-content:space-between; margin:1rem 0; }
+.pub-controls .filters label { margin-right: .75rem; font-size:.95rem; }
+.pub-list { display:block; }
+.pub-item { padding:1rem; border:1px solid #eee; border-radius:8px; margin:.6rem 0; background:#fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+.pub-title { margin:0 0 .25rem; font-weight:600; }
+.pub-meta { color:#666; margin:0 0 .25rem; }
+.pub-links a { color: var(--brand-color); }
+
+.btn { background: var(--brand-color); color:#fff; border:none; border-radius:6px; padding:.5rem .8rem; cursor:pointer; }
+.btn-ghost { background: transparent; color: var(--brand-color); border:1px solid var(--brand-color); }
