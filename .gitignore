@@ -4,3 +4,14 @@ server_uiux.log
 next-site/.next/
 next-site/node_modules/
 next-site/out/
+
+# Hugo
+public/
+resources/
+.hugo_build.lock
+
+# Tools & Binaries
+hugo
+hugo.tar.gz
+go/
+go.tar.gz
