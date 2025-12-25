@@ -11,4 +11,11 @@ I am an Assistant Professor of Computer Science specializing in cybersecurity, c
 
 **Research interests** include computing education, curriculum development, cloud systems, cybersecurity pedagogy, and technology adoption in regulated domains.
 
+### Education
+- **DIT in Information Technology**, Walden University
+- **M.S. Information Technology**, Walden University
+
+### Experience
+- **Assistant Professor**, Saint Leo University (Current)
+
 [Curriculum Vitae](/cv/) · [Publications](/publication/) · [Teaching](/teaching/) · [ORCID](https://orcid.org/0000-0002-7185-9125)
