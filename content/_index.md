@@ -2,7 +2,7 @@
 title: "Home"
 ---
 
-## Joshua Adams, Doctor of Information Technology
+## Joshua Adams, DIT
 **Assistant Professor of Computer Science**
 
 Cybersecurity · Cloud Computing · Project-Based Learning
