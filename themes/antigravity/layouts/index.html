@@ -1,15 +1,24 @@
 {{ define "main" }}
-<div class="profile-header">
-    <img src="/authors/admin/avatar.png" alt="{{ .Params.author }}" class="profile-avatar">
-    <div>
-        <h2>{{ .Title }}</h2>
-        <p><strong>{{ .Params.role }}</strong></p>
-        <p>{{ .Params.organization }}</p>
-        <p><a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a></p>
+<div class="hero">
+    <div class="split">
+        <div>
+            <h1>{{ .Title }}</h1>
+            <p class="kicker">{{ .Params.role }}</p>
+            <p class="small">{{ .Params.organization }}</p>
+            <div class="cta">
+                <a href="mailto:{{ .Params.email }}">Contact Me</a>
+                <a href="/cv/">Download CV</a>
+                <a href="https://orcid.org/0000-0002-7185-9125">ORCID</a>
+            </div>
+        </div>
+        <div style="text-align:center; display: flex; align-items: center; justify-content: center;">
+            <img src="/authors/admin/avatar.png" alt="{{ .Params.author }}"
+                style="width: 160px; height: 160px; border-radius: 50%; border: 3px solid rgba(255,255,255,0.3);">
+        </div>
     </div>
 </div>
 
-<div class="content">
+<div class="container content">
     {{ .Content }}
 </div>
 {{ end }}

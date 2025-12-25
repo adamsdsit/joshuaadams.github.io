@@ -3,15 +3,76 @@
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 <meta name="description" content="{{ .Params.description | default .Site.Params.description }}">
 <style>
-  body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 2rem; color: #333; }
-  header { margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
-  nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; flex-wrap: wrap; }
-  nav a { text-decoration: none; color: #0066cc; font-weight: 500; }
-  nav a:hover { text-decoration: underline; }
-  h1, h2, h3 { color: #111; }
-  a { color: #0066cc; }
-  footer { margin-top: 4rem; border-top: 1px solid #eee; padding-top: 1rem; color: #666; font-size: 0.9rem; }
-  .profile-header { display: flex; gap: 2rem; align-items: start; margin-bottom: 2rem; }
-  .profile-avatar { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; background: #eee; }
-  .content { margin-top: 2rem; }
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #333;
+  }
+
+  header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: 500;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: #111;
+  }
+
+  a {
+    color: #0066cc;
+  }
+
+  footer {
+    margin-top: 4rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  .profile-header {
+    display: flex;
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 2rem;
+  }
+
+  .profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #eee;
+  }
+
+  .content {
+    margin-top: 2rem;
+  }
 </style>
+{{ range .Site.Params.custom_css }}
+<link rel="stylesheet" href="{{ . | relURL }}">
+{{ end }}

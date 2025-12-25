@@ -8,6 +8,8 @@ params:
   author: "Joshua Adams"
   email: "contact@joshuaadams.dev"
   orcid: "https://orcid.org/0000-0002-7185-9125"
+  custom_css:
+    - "css/custom.css"
 
 menu:
   main:
