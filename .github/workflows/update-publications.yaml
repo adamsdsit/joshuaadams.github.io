@@ -1,0 +1,35 @@
+name: Update publications from ORCID
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  update-publications:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate publication pages from ORCID
+        env:
+          ORCID_ID: "0000-0002-7185-9125"
+        run: |
+          python scripts/orcid_to_hugo.py
+
+      - name: Commit changes (if any)
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add content/publication/*.md
+          git diff --cached --quiet || git commit -m "chore: update publications from ORCID"
+          git push

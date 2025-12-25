@@ -38,3 +38,6 @@ menu:
     - name: Contact
       url: /contact/
       weight: 9
+    - name: ORCID
+      url: https://orcid.org/0000-0002-7185-9125
+      weight: 10
