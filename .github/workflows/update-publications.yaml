@@ -29,6 +29,7 @@ jobs:
           ORCID_ID: "0000-0002-7185-9125"
         run: |
           python scripts/orcid_to_hugo.py
+          bash scripts/copy_bibtex.sh
 
       - name: Commit changes (if any)
         run: |
