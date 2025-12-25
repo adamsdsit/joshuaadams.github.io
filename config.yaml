@@ -7,6 +7,7 @@ params:
   description: "Assistant Professor of Computer Science | Cybersecurity, Cloud Computing, Project-Based Learning"
   author: "Joshua Adams"
   email: "joshadams@protonmail.com"
+  orcid: "https://orcid.org/0000-0002-7185-9125"
 
 menu:
   main:
