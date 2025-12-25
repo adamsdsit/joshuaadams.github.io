@@ -2,43 +2,43 @@
 widget: features
 headless: true
 weight: 30
-title: Skills & Expertise
+title: Skills
+subtitle:
 active: true
 design:
-  columns: "2"
-  view: 1
-content:
-  items:
-  - icon: cloud
+  columns: "1"
+  view: 3
+items:
+  - icon: code
     icon_pack: fas
-    name: Cloud & Infrastructure
-    description: 90%
-  - icon: shield-alt
+    name: Web & UX Management
+    description: ""
+  - icon: file-contract
     icon_pack: fas
-    name: Security & Risk
-    description: 88%
+    name: Vendor & Contract Management
+    description: ""
+  - icon: wallet
+    icon_pack: fas
+    name: Budget & Financial Management
+    description: ""
   - icon: sitemap
     icon_pack: fas
-    name: Architecture & Systems
-    description: 86%
-  - icon: chalkboard-teacher
-    icon_pack: fas
-    name: Teaching & Research
-    description: 92%
+    name: System Architecture
+    description: ""
   - icon: users
     icon_pack: fas
-    name: Team Building
-    description: Leadership
-  - icon: handshake
+    name: Team Leadership
+    description: ""
+  - icon: comments
     icon_pack: fas
-    name: Collaboration
-    description: Cross-Functional
-  - icon: balance-scale
+    name: Customer Engagement
+    description: ""
+  - icon: laptop-code
     icon_pack: fas
-    name: Conflict Resolution
-    description: Leadership
-  - icon: chart-line
+    name: Technical Leadership
+    description: ""
+  - icon: tasks
     icon_pack: fas
-    name: Business Development
-    description: Strategy
+    name: Project Management
+    description: ""
 ---

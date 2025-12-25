@@ -2,6 +2,8 @@ github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5 v5.9.7 h1:QPek2B
 github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5 v5.9.7/go.mod h1:xZiTEEurbEwj/NhZohozvlyLCGVCT2wARHDAJeqKG/c=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-core v0.3.1/go.mod h1:So8+V2U+TNxlXmcpZfdDX0muLh3PdJ7z92h30sv3bZg=
 github.com/HugoBlox/hugo-blox-builder/modules/blox-seo v0.2.2/go.mod h1:NsESu6cEms1DgH84icCyylElg2Zu8A0f7Fma5JR0LZE=
+github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind v0.10.0 h1:LZnRHMenSA0UJqVGKS3Unk+W+y2IDiYRzdCaGueoFzc=
+github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind v0.10.0/go.mod h1:iiKLoehg9IqQd0R4jUfhl+wvJCiXPNgV88A/V8iKSLY=
 github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-core v0.2.1-0.20231101183355-53a94b591ea8/go.mod h1:kJwI9H8dicHQCnP8G9EvUDI+oNg/yXcGsjGjwjXuM8I=
 github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-core v0.2.1-0.20231101183733-7b61e2f369e6/go.mod h1:kJwI9H8dicHQCnP8G9EvUDI+oNg/yXcGsjGjwjXuM8I=
 github.com/wowchemy/wowchemy-hugo-themes/modules/wowchemy-seo v0.1.1-0.20231101183733-7b61e2f369e6/go.mod h1:ecSfomc5wqJSsZb+WuOJGMqCDxONsooRuWmIObTOpR0=

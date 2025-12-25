@@ -21,4 +21,4 @@ cta:
 
 **Certified Business Continuity Professional (CBCP) • IT & Cybersecurity • Researcher • Educator**
 
-Seasoned IT and resilience professional with 20+ years leading technical programs, teaching, and consulting.
+Welcome to my academic portfolio and research group. I am a seasoned IT and resilience professional with 20+ years leading technical programs, teaching, and consulting.

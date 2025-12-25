@@ -1,33 +1,46 @@
 ---
 title: Joshua Adams
-role: Certified Business Continuity Professional (CBCP) | IT & Cybersecurity | Researcher | Educator
+role: Assistant Professor of Computer Science & Cybersecurity
 avatar_filename: avatar.png
-bio: Seasoned IT and resilience professional with 20+ years leading technical programs, teaching, and consulting.
+bio: Assistant Professor involved in curriculum development and delivery of course content for various computer information systems subjects.
 interests:
-  - Resilience Engineering
-  - Cloud Security
-  - Computing Education
+  - Artificial Intelligence
+  - Machine Learning
+  - Cloud Computing
+  - Cybersecurity
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:contact@joshuaadams.dev'
+    link: 'mailto:joshadams@protonmail.com'
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com/in/adamdsit/
-  - icon: orcid
+    link: https://www.linkedin.com/in/adamdsit
+  - icon: google-scholar
     icon_pack: ai
-    link: https://orcid.org/0000-0002-7185-9125
+    link: ''
 organizations:
-  - name: FlexAMS
-    url: ""
+  - name: Saint Leo University
+    url: ''
 education:
   courses:
-    - course: Doctorate in Information Technology
-      institution: Walden University
-      year: 2020
+    - course: Graduate Certificate in Artificial Intelligence (In Progress)
+      institution: Stanford University Online
+      year: 2021 - Present
+    - course: MS in Information Technology Strategic Leadership
+      institution: Walden University Online
+      year: 2016
+    - course: MBA in Information Security Management
+      institution: Saint Leo University
+      year: 2014
+    - course: BA & BS in Business Administration and Mass Communication
+      institution: University of South Florida
+      year: 2014
+    - course: Applied Science Degree in Medical Laboratory Science
+      institution: George Washington University
+      year: 2005
 superuser: true
 user_groups:
   - Researchers
 ---
 
-Dynamic and results-driven professional with over 20 years of experience in IT, cybersecurity, and enterprise architecture. Certified Business Continuity Professional (CBCP) with proven expertise in technical project management, stakeholder management, and leading cross-functional teams. Adept at leveraging emerging technologies, data analysis, and developing innovative solutions. Experienced in coding, technical troubleshooting, and AI/machine learning. Passionate about driving strategic growth and improving customer experience.
+Assistant Professor of Computer Science & Cybersecurity with extensive experience in enterprise architecture, healthcare IT consultant, and education.
