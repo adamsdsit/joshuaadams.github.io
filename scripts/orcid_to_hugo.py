@@ -18,7 +18,7 @@ from pathlib import Path
 
 ORCID_ID = os.getenv("ORCID_ID", "0000-0002-7185-9125").strip()
 OUT_DIR = Path("content/publication")
-BIB_DIR = Path("data")
+BIB_DIR = Path("static")
 BIB_PATH = BIB_DIR / "publications.bib"
 AUTO_TAG = "autogen_orcid"
 API_BASE = "https://pub.orcid.org/v3.0"
