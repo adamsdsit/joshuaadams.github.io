@@ -17,9 +17,9 @@
                 {{ range $link := $nav.Params.left_links }}
                 {{ $parts := split $link "," }}
                 {{ if eq (len $parts) 3 }}
-                {{ $title := strings.TrimSpace (index $parts 0) }}
-                {{ $url := strings.TrimSpace (index $parts 1) }}
-                {{ $enabled := strings.TrimSpace (index $parts 2) }}
+                {{ $title := trim " " (index $parts 0) }}
+                {{ $url := trim " " (index $parts 1) }}
+                {{ $enabled := trim " " (index $parts 2) }}
 
                 <div class="navbar_dropdown-element-wrapper">
                     {{ if eq $enabled "false" }}
@@ -41,13 +41,13 @@
 
                 {{ range $link := $nav.Params.right_links }}
                 {{ $parts := split $link "," }}
-                {{ $title := strings.TrimSpace (index $parts 0) }}
-                {{ $url := strings.TrimSpace (index $parts 1) }}
+                {{ $title := trim " " (index $parts 0) }}
+                {{ $url := trim " " (index $parts 1) }}
                 {{ $hasOnClick := eq (len $parts) 3 }}
                 {{ $needsOnClick := false }}
 
                 {{ if $hasOnClick }}
-                {{ $needsOnClick = strings.TrimSpace (index $parts 2) | eq "false" }}
+                {{ $needsOnClick = trim " " (index $parts 2) | eq "false" }}
                 {{ end }}
 
                 <div class="navbar_hide-desktop-custom">
@@ -72,12 +72,12 @@
 
                 {{ range $item := (append $nav.Params.right_links $nav.Params.buttons) }}
                 {{ $parts := split $item "," }}
-                {{ $title := strings.TrimSpace (index $parts 0) }}
-                {{ $url := strings.TrimSpace (index $parts 1) }}
+                {{ $title := trim " " (index $parts 0) }}
+                {{ $url := trim " " (index $parts 1) }}
                 {{ $needsOnClick := false }}
 
                 {{ if eq (len $parts) 3 }}
-                {{ $needsOnClick = strings.TrimSpace (index $parts 2) | eq "false" }}
+                {{ $needsOnClick = trim " " (index $parts 2) | eq "false" }}
                 {{ end }}
 
                 <div class="buttonwrapper is-navbar">
@@ -122,12 +122,12 @@
                 <div class="flex flex-centre-align flex-gap-1-5rem">
                     {{ range $btn := $nav.Params.buttons }}
                     {{ $parts := split $btn "," }}
-                    {{ $title := strings.TrimSpace (index $parts 0) }}
-                    {{ $url := strings.TrimSpace (index $parts 1) }}
+                    {{ $title := trim " " (index $parts 0) }}
+                    {{ $url := trim " " (index $parts 1) }}
                     {{ $needsOnClick := false }}
 
                     {{ if eq (len $parts) 3 }}
-                    {{ $needsOnClick = strings.TrimSpace (index $parts 2) | eq "false" }}
+                    {{ $needsOnClick = trim " " (index $parts 2) | eq "false" }}
                     {{ end }}
 
                     {{ if eq $title "Get started" }}

@@ -15,3 +15,7 @@ hugo
 hugo.tar.gz
 go/
 go.tar.gz
+
+# Backup files
+content_backup/
+*.bak

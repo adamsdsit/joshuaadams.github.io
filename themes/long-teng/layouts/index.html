@@ -124,9 +124,9 @@
                                                     {{ range $step := $howToPage.Params.steps }}
 
                                                     {{ $parts := split $step " | " }}
-                                                    {{ $step_number := strings.TrimSpace (index $parts 0) }}
-                                                    {{ $title := strings.TrimSpace (index $parts 1) }}
-                                                    {{ $description := strings.TrimSpace (index $parts 2) }}
+                                                    {{ $step_number := trim " " (index $parts 0) }}
+                                                    {{ $title := trim " " (index $parts 1) }}
+                                                    {{ $description := trim " " (index $parts 2) }}
 
 
                                                     <a class="product-tour-tab_link-wrap w-inline-block w-tab-link active w--current">
