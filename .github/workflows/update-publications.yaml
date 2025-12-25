@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: orcid-publications
+  cancel-in-progress: true
+
 jobs:
   update-publications:
     runs-on: ubuntu-latest
@@ -20,7 +24,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Generate publication pages from ORCID
+      - name: Generate publications + BibTeX from ORCID
         env:
           ORCID_ID: "0000-0002-7185-9125"
         run: |
@@ -30,6 +34,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add content/publication/*.md
-          git diff --cached --quiet || git commit -m "chore: update publications from ORCID"
+          git add content/publication/*.md data/publications.bib
+          git diff --cached --quiet || git commit -m "chore: sync publications from ORCID"
           git push
