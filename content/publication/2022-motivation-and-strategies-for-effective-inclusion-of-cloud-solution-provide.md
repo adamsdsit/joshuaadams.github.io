@@ -4,6 +4,7 @@ date: "2022-01-01"
 publication_types: ["conference"]
 orcid: "https://orcid.org/0000-0002-7185-9125"
 autogen: "autogen_orcid"
+pdf: "/media/papers/2022-motivation-and-strategies-for-effective-inclusion-of-cloud-solution-provide.pdf"
 ---
 
 **ORCID:** https://orcid.org/0000-0002-7185-9125

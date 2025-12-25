@@ -4,6 +4,7 @@ date: "2021-01-01"
 publication_types: ["article"]
 orcid: "https://orcid.org/0000-0002-7185-9125"
 autogen: "autogen_orcid"
+pdf: "/media/papers/2021-planning-a-conceptual-framework-approach-for-teaching-cloud-fundamentals.pdf"
 ---
 
 **ORCID:** https://orcid.org/0000-0002-7185-9125
