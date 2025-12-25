@@ -10,10 +10,10 @@ Across my courses, students engage directly with industry-relevant tools and pla
 
 ## Courses Taught
 
-- **Fundamentals of Cybersecurity**
-- **Python Programming**
-- **Software Engineering**
-- **Systems Analysis & Design**
-- Research Capstone
-- Software Quality
+- Fundamentals of Cybersecurity  
+- Python Programming  
+- Software Engineering  
+- Systems Analysis & Design  
+- Research Capstone  
+- Software Quality  
 - Mobile Applications
