@@ -1,0 +1,73 @@
+baseURL: https://joshuaadams.dev/
+languageCode: en-us
+title: Dr. Joshua Adams
+theme: ["hugo-fresh"]
+
+googleAnalytics: "" 
+
+disableKinds:
+- taxonomy
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  openGraph: true
+  description: "Academic Portfolio and CV of Dr. Joshua Adams"
+  
+  navbarlogo:
+    image: logos/fresh.svg # Placeholder
+    link: /
+
+  font:
+    name: "Open Sans"
+    sizes: [400,600]
+
+  hero:
+    title: Dr. Joshua Adams
+    subtitle: Scientist | Engineer | Innovator
+    buttontext: View My Work
+    buttonlink: "#section1"
+    image: illustrations/worker.svg # Placeholder
+
+  navbar:
+  - title: Home
+    url: /
+  - title: About
+    url: /#about
+  - title: Projects
+    url: /#projects
+  - title: Contact
+    url: /#contact
+
+  sidebar:
+    logo: fresh-square
+    sections:
+    - title: Links
+      icon: user
+      links:
+      - text: GitHub
+        url: https://github.com/adamsdsit
+
+  section1:
+    title: Featured Projects
+    subtitle: Exploring the intersection of data and reality
+    tiles:
+    - title: Data Science
+      icon: mouse-globe
+      text: Advanced analytics and machine learning models.
+      url: /
+      buttonText: Read More
+    - title: web Development
+      icon: laptop-cloud
+      text: Building responsive and modern web applications.
+      url: /
+      buttonText: Read More
+
+  footer:
+    logo: fresh-white-alt.svg
+    socialmediatitle: Connect
+    socialmedia:
+    - link: https://github.com/adamsdsit
+      icon: github

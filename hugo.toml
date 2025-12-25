@@ -1,8 +1,0 @@
-baseURL = "https://joshuaadams.dev/"
-languageCode = "en-us"
-title = "Joshua Adams"
-theme = "long-teng"
-description = "Academic Portfolio and CV"
-
-[params]
-    Author = 'Dr. Joshua Adams'
