@@ -2,6 +2,6 @@
 title: "Contact"
 ---
 
-**Email**: [joshadams@protonmail.com](mailto:joshadams@protonmail.com)
-
-**Office Hours**: By appointment.
+Email: joshadams@protonmail.com  
+LinkedIn: https://www.linkedin.com/in/adamdsit  
+ORCID: https://orcid.org/0000-0002-7185-9125

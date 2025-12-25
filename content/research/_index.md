@@ -11,7 +11,9 @@ Designing hands-on curricula that improve student learning outcomes and workforc
 Developing and evaluating cloud-first instructional modules aligned with industry roles.
 
 ### Cybersecurity Pedagogy
-Creating experiential learning environments that emphasize real-world security practices.
+Creating experiential learning environments emphasizing real-world security practices.
 
 ### Technology Adoption
-Studying adoption strategies for complex systems in healthcare and regulated environments.
+Studying adoption strategies for complex systems in healthcare and other regulated domains.
+
+**ORCID Profile:** https://orcid.org/0000-0002-7185-9125
