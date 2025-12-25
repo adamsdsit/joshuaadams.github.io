@@ -1,0 +1,39 @@
+baseURL: "https://joshuaadams.dev/"
+title: "Joshua Adams, PhD"
+theme: antigravity
+languageCode: "en-us"
+
+params:
+  description: "Assistant Professor of Computer Science | Cybersecurity, Cloud Computing, Project-Based Learning"
+  author: "Joshua Adams"
+  email: "joshadams@protonmail.com"
+
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+    - name: Teaching
+      url: /teaching/
+      weight: 2
+    - name: Courses
+      url: /courses/
+      weight: 3
+    - name: Syllabi
+      url: /syllabi/
+      weight: 4
+    - name: Research
+      url: /research/
+      weight: 5
+    - name: Publications
+      url: /publication/
+      weight: 6
+    - name: Service
+      url: /service/
+      weight: 7
+    - name: CV
+      url: /cv/
+      weight: 8
+    - name: Contact
+      url: /contact/
+      weight: 9

@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="profile-header">
+    <img src="/authors/admin/avatar.jpg" alt="{{ .Params.author }}" class="profile-avatar">
+    <div>
+        <h2>{{ .Title }}</h2>
+        <p><strong>{{ .Params.role }}</strong></p>
+        <p>{{ .Params.organization }}</p>
+        <p><a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a></p>
+    </div>
+</div>
+
+<div class="content">
+    {{ .Content }}
+</div>
+{{ end }}
